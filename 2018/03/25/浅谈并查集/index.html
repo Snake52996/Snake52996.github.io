@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://snake52996.github.io/Snake52996">
-  <title>Archives: 2018 | Snake的随波逐流</title>
+  <title>浅谈并查集 | Snake的随波逐流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个蒟蒻的小站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Snake的随波逐流">
-<meta property="og:url" content="https://snake52996.github.io/Snake52996/archives/2018/index.html">
+  <meta name="description" content="最近在洛谷上看到了一道水题,是NOI2002的第一题,银河英雄传说.一看上去就是个并查集,感觉很简单的样子(心想:没想到NOI还有这么水的题!),结果一做才知道:逻辑想的挺好,实际上就是WA.在交了好几次WA之后,仔细把自己的逻辑重新整理了几遍,终于发现了问题所在,于是A掉了这道题.(明明我的逻辑基本上一点问题都没有,就是忽略了一个赋值的先后带来的影响!) 感觉自己还是没有真正掌握并查集的皮毛(好">
+<meta name="keywords" content="数据结构,并查集,树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈并查集">
+<meta property="og:url" content="https://snake52996.github.io/Snake52996/2018/03/25/浅谈并查集/index.html">
 <meta property="og:site_name" content="Snake的随波逐流">
-<meta property="og:description" content="一个蒟蒻的小站">
+<meta property="og:description" content="最近在洛谷上看到了一道水题,是NOI2002的第一题,银河英雄传说.一看上去就是个并查集,感觉很简单的样子(心想:没想到NOI还有这么水的题!),结果一做才知道:逻辑想的挺好,实际上就是WA.在交了好几次WA之后,仔细把自己的逻辑重新整理了几遍,终于发现了问题所在,于是A掉了这道题.(明明我的逻辑基本上一点问题都没有,就是忽略了一个赋值的先后带来的影响!) 感觉自己还是没有真正掌握并查集的皮毛(好">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-25T08:08:11.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snake的随波逐流">
-<meta name="twitter:description" content="一个蒟蒻的小站">
+<meta name="twitter:title" content="浅谈并查集">
+<meta name="twitter:description" content="最近在洛谷上看到了一道水题,是NOI2002的第一题,银河英雄传说.一看上去就是个并查集,感觉很简单的样子(心想:没想到NOI还有这么水的题!),结果一做才知道:逻辑想的挺好,实际上就是WA.在交了好几次WA之后,仔细把自己的逻辑重新整理了几遍,终于发现了问题所在,于是A掉了这道题.(明明我的逻辑基本上一点问题都没有,就是忽略了一个赋值的先后带来的影响!) 感觉自己还是没有真正掌握并查集的皮毛(好">
   
     <link rel="alternative" href="/atom.xml" title="Snake的随波逐流" type="application/atom+xml">
   
@@ -139,132 +141,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-浅谈并查集" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/读写挂测试与怀疑人生/" class="archive-article-date">
-  	<time datetime="2018-03-25T08:52:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/读写挂测试与怀疑人生/">读写挂测试与怀疑人生</a>
+    <h1 class="article-title" itemprop="name">
+      浅谈并查集
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">胡言乱语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实验</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">奇技淫巧</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读写优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/树链剖分学习笔记/" class="archive-article-date">
-  	<time datetime="2018-03-25T08:10:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/树链剖分学习笔记/">树链剖分学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">暴力</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/浅谈并查集/" class="archive-article-date">
+        
+        <a href="/2018/03/25/浅谈并查集/" class="archive-article-date">
   	<time datetime="2018-03-25T07:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/浅谈并查集/">浅谈并查集</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在洛谷上看到了一道水题,是NOI2002的第一题,银河英雄传说.一看上去就是个并查集,感觉很简单的样子(心想:没想到NOI还有这么水的题!),结果一做才知道:逻辑想的挺好,实际上就是WA.在交了好几次WA之后,仔细把自己的逻辑重新整理了几遍,终于发现了问题所在,于是A掉了这道题.<del>(明明我的逻辑基本上一点问题都没有,就是忽略了一个赋值的先后带来的影响!)</del></p>
+<p>感觉自己还是没有真正掌握并查集的皮毛(好伤心),于是打算总结一下并查集,争取能温故知新.</p>
+<a id="more"></a>
+<hr>
+<h2 id="并查集的意义-需求"><a href="#并查集的意义-需求" class="headerlink" title="并查集的意义(需求)"></a>并查集的意义(需求)</h2><p>标准的并查集是为了高效的进行一系列的如下操作:</p>
+<ul>
+<li>将x和y所在的集合合并为一个集合</li>
+<li>查询x与y是否存在于同一集合</li>
+</ul>
+<p>其中由于是集合的合并,因此我们需要重新将集合中的所有元素放入新的集合.而并查集就是为了高效的实现这些操作.</p>
+<h2 id="并查集的基本思想"><a href="#并查集的基本思想" class="headerlink" title="并查集的基本思想"></a>并查集的基本思想</h2><p>我们采用一个标记值,具有相同的标记值的元素将被认为是存在于同一集合中.理论上这个标记值是任意的,但为了方便,我们常常将集合中的<em>某个</em>元素作为标记值.</p>
+<h2 id="前置知识需求"><a href="#前置知识需求" class="headerlink" title="前置知识需求"></a>前置知识需求</h2><p>为了理解并查集,需要现行学习以下的知识:</p>
+<ul>
+<li>数组的基本操作</li>
+<li>树的基本概念</li>
+<li>递归算法</li>
+<li>结构体</li>
+<li>链表</li>
+</ul>
+<hr>
+<h2 id="并查集的初级实现"><a href="#并查集的初级实现" class="headerlink" title="并查集的初级实现"></a>并查集的初级实现</h2><h3 id="并查集的数组实现"><a href="#并查集的数组实现" class="headerlink" title="并查集的数组实现"></a>并查集的数组实现</h3><p>显然,可以用一个一位数组(称之为f)完成所需要进行的操作.元素x与y在同一个集合当且仅当<code>f[x]==f[y]</code>.代码很简单.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10010</span>;</span><br><span class="line"><span class="keyword">int</span> f[MAX];</span><br><span class="line"><span class="keyword">int</span> n;<span class="comment">//假设n中已经存储了当前的总元素数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span><span class="comment">//初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;<span class="comment">//开始任何两个元素都不在同一集合中</span></span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span><span class="comment">//合并</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x]==f[y]) <span class="keyword">return</span>;<span class="comment">//不必检查已经合并的,可以节省一定的时间(没啥用)</span></span><br><span class="line">	<span class="keyword">int</span> tmp=f[x];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(f[i]==tmp) f[i]=f[y];<span class="comment">//调整所有的与x在同一集合中的元素的标记值使其与y中元素的标记值相同,从而表示它们被合并进了进入y所在的集合</span></span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span><span class="comment">//检查x与y是否在同一个集合中</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> f[x]==f[y];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>显然,这个方法是正确的.我们可以尝试通过洛谷的<a href="https://www.luogu.org/problemnew/show/P3367" target="_blank" rel="noopener">并查集模板题</a>(记得看清数组要开多大).完整的代码像下面这样(如同以前一样,我会省略一切之前出现过的解释文字):</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10010</span>;</span><br><span class="line"><span class="keyword">int</span> f[MAX];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[x]==f[y]) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> tmp=f[x];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(f[i]==tmp) f[i]=f[y];</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> f[x]==f[y];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m,flag,x,y;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;flag,&amp;x,&amp;y);</span><br><span class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>) join(x,y);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(check(x,y)) <span class="built_in">printf</span>(<span class="string">"Y\n"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"N\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>umm…AC了(和我的计划有些出入).好吧,我们来这里进行尝试:<a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">259. 亲戚</a>.</p>
+<p>仔细读题,发现这也是一个单纯的并查集.因此,按照题目的输入格式修改一下代码(请注意,这里使用的是<strong>文件读写</strong>),比赛中是没有优化的,因此我们选择 “无优化开关”(一定要选…不然…).</p>
+<p>umm…TLE了<del>(强行)</del>.</p>
+<p>我们来胡乱分析一波时间复杂度.对于n个元素m次操作,假设合并和查询随机出现,而合并时间复杂度为$O(n)$,查询为$O(1)$,平均时间复杂度近似为$O(nm)$,显然太慢,因此会超时.</p>
+<p>我们来思考另一种思路:之前的方法中时间主要浪费在合并时遍历f数组.我们想到使用链表,将同一集合的元素链在一起,那么我们修改时只需要遍历一遍其中一条链,再将两条链拼接在一起,而不会访问无意义的数据,显然提高了效率.按照这个思路,我们获得了并查集的另一种初级实现.</p>
+<h3 id="并查集的链表实现"><a href="#并查集的链表实现" class="headerlink" title="并查集的链表实现"></a>并查集的链表实现</h3><p>我们定义一个结构体,将元素的信息存储进去,然后定义一个结构体数组表示元素,命名为a,像这样:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ele</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ele* f;<span class="comment">//指向下标为当前元素的标记值的元素的指针</span></span><br><span class="line">	ele* next;<span class="comment">//指向链表中下一个元素的指针</span></span><br><span class="line">	ele* ends;<span class="comment">//指向链表末尾的指针</span></span><br><span class="line">	</span><br><span class="line">	ele()<span class="comment">//构造函数,用于初始化</span></span><br><span class="line">	&#123;</span><br><span class="line">		f=<span class="keyword">this</span>;<span class="comment">//各自为一个集合,自己的下标就是自己的标记值</span></span><br><span class="line">		next=<span class="literal">NULL</span>;<span class="comment">//链表只有当前一个元素,没有下一个元素</span></span><br><span class="line">		ends=<span class="keyword">this</span>;<span class="comment">//链表末尾就是自己</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">ele a[MAX];</span><br></pre></td></tr></table></figure>
+<p>我们在检查x和y是否在同一个集合中的时候,同样仅需检查它们的f是否相同,也就是x与y在同一集合,当且仅当<code>a[x].f==a[y].f</code>.写成函数:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a[x].f==a[y].f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而合并时,我们需要遍历一遍其中一条链(链x),修改其上的所有元素的f.为了方便和直观起见,我们选用链表头元素的下标作为标记值.那么,我们就只需要在遍历并修改f之后,修改另一条链(链y)的尾的next值使其指向链x,那么链x就被连接到了链y之后,依然满足我们的约定.代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(check(x,y)) <span class="keyword">return</span>;<span class="comment">//已经在同一集合中,不必合并</span></span><br><span class="line">	ele* tar=a[x].f;<span class="comment">//当前元素</span></span><br><span class="line">	ele* head=tar;<span class="comment">//保存原链的头(其实修改一下下面的代码就可以省下这一个空间,但我懒得改了)</span></span><br><span class="line">	<span class="keyword">while</span>(tar!=<span class="literal">NULL</span>)<span class="comment">//直到移出了链表</span></span><br><span class="line">	&#123;</span><br><span class="line">		tar-&gt;f=a[y].f;<span class="comment">//修改f值</span></span><br><span class="line">		tar=tar-&gt;next;<span class="comment">//向后移动</span></span><br><span class="line">	&#125;</span><br><span class="line">	a[y].f-&gt;ends-&gt;next=head;<span class="comment">//将两条链连接</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就完成了并查集的链表实现.我们再次尝试去解决<a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">259. 亲戚</a>.完善之后的完整代码如下:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">20010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ele</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ele* f;</span><br><span class="line">	ele* next;</span><br><span class="line">	ele* ends;</span><br><span class="line">	</span><br><span class="line">	ele()</span><br><span class="line">	&#123;</span><br><span class="line">		f=<span class="keyword">this</span>;</span><br><span class="line">		next=<span class="literal">NULL</span>;</span><br><span class="line">		ends=<span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">ele a[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a[x].f==a[y].f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(check(x,y)) <span class="keyword">return</span>;</span><br><span class="line">	ele* tar=a[x].f;</span><br><span class="line">	ele* head=tar;</span><br><span class="line">	<span class="keyword">while</span>(tar!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		tar-&gt;f=a[y].f;</span><br><span class="line">		tar=tar-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	a[y].f-&gt;ends-&gt;next=head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"relations.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);<span class="comment">//文件读</span></span><br><span class="line">	freopen(<span class="string">"relations.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);<span class="comment">//文件写</span></span><br><span class="line">	<span class="keyword">int</span> n,m,x,y,q;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		join(x,y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		<span class="keyword">if</span>(check(x,y)) <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>依然选择无优化开关,这次成功的A掉了这道题.</p>
+<p>但是仔细观察数据,我们注意到有好几个点是900多毫秒通过的,在超时的边缘试探.看来还是不行.我们再来分析.</p>
+<p>这个方法中的时间主要仍是遍历一遍链表.我们注意到虽然操作两条链表,但需要遍历的只有一条.自然想到,我们应该尽量的去遍历更短的那一条,这样会花费更少的时间.如何确定那一条更短呢?我们可以在结构体中添加一个变量size,表示以该元素为表头的链表的长度.显然,合并将使链表的长度变为两链原长之和,而我们只须修改表头元素的信息即可,不会花费过多的额外时间.而初始化也很简单:只有一个元素的链表长度自然为1.</p>
+<p>而在合并时,我们只需要判断一下,选择遍历更短的链表即可.修改后的代码只加上了为数不多的几条语句:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">20010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ele</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ele* f;</span><br><span class="line">	ele* next;</span><br><span class="line">	ele* ends;</span><br><span class="line">	<span class="keyword">int</span> size;<span class="comment">//定义size</span></span><br><span class="line">	</span><br><span class="line">	ele()</span><br><span class="line">	&#123;</span><br><span class="line">		f=<span class="keyword">this</span>;</span><br><span class="line">		next=<span class="literal">NULL</span>;</span><br><span class="line">		ends=<span class="keyword">this</span>;</span><br><span class="line">		size=<span class="number">1</span>;<span class="comment">//初始化size</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">ele a[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a[x].f==a[y].f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(check(x,y)) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span>(a[x].f-&gt;size&gt;a[y].f-&gt;size) x^=y^=x^=y;<span class="comment">//如果x链的长度更长,交换x和y的值,使得这行执行后x所在的链是更短的链</span></span><br><span class="line">	ele* tar=a[x].f;</span><br><span class="line">	ele* head=tar;</span><br><span class="line">	<span class="keyword">while</span>(tar!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		tar-&gt;f=a[y].f;</span><br><span class="line">		tar=tar-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	a[y].f-&gt;ends-&gt;next=head;</span><br><span class="line">	a[y].f-&gt;size+=head-&gt;size;<span class="comment">//维护size的值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"relations.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"relations.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> n,m,x,y,q;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		join(x,y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		<span class="keyword">if</span>(check(x,y)) <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再次尝试提交,在无优化开关的情况下,我们的优化成功使耗时最长的测试点从$912ms$优化到了$53ms$,而代码量只增加了4行,内存占用增加了$20kb$.</p>
+<p>似乎到这里已经很优了.但事实上,我们还能做的更好.放松对于属于同一集合的元素标记值的限制,将给我们打开更广阔的空间.在下面的方法中,我们将不再限定属于同一集合的元素必须被相同的标记值标记.这将使我们的查找变慢,但将提高合并速度.</p>
+<h3 id="并查集的有根树实现"><a href="#并查集的有根树实现" class="headerlink" title="并查集的有根树实现"></a>并查集的有根树实现</h3><p>现在我们重新定义一下我们的f数组:</p>
+<blockquote>
+<p><strong>f[i]表示元素i在树上父亲是f[i].</strong></p>
+<p>特殊的,对于没有父亲的节点(如x),我们令<code>f[x]=x</code>,并称这样的元素为其子树中任意元素的祖先.</p>
+</blockquote>
+<p>现在,对于两个元素x和y,它们在同一集合中当且仅当<code>x的祖先和y的祖先相同</code>.</p>
+<p>按照这些定义和约定,我们分不同的操作来看如何用这种方式实现并查集.</p>
+<p>1.<strong>如何使用</strong></p>
+<p>同样的,在研究如何初始化(并操作)并查集之前,我们先假设已经完成了这些操作,来研究如何正确的进行查询.</p>
+<p>假设我们现在被询问元素x与y是否存在于同一个集合中.按照我们之前给出的定义,我们应该分别寻找x和y的祖先,然后比较这两个祖先是否相同.而祖先(设为k)的标志是<code>f[k]==k</code>,那么我们就可以用一个while循环完成对祖先的查找;由于一次check中要进行两次查询,我们将查询写为函数可以减小代码量.按照我们的分析,可以写出如下的代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//略去了对数组的定义</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span><span class="comment">//寻找a的祖先</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(f[a]!=a) a=f[a];<span class="comment">//当f[a]!=a时,说明当前的a尚不是祖先,我们要继续向上寻找</span></span><br><span class="line">	<span class="keyword">return</span> a;<span class="comment">//此时一定有a==f[a],也就是说我们已经找到了祖先,就是当前的a,直接返回</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> find(x)==find(y);<span class="comment">//将find写为函数之后check函数就无比简单了,直接比较以x和y为参数执行的find返回的祖先是否相同就可以了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以像这样形象(但不一定准确)的理解这个过程:这是一个组织,有准确的领导关系:每个人会被另一个人领导(他的父亲),但同时他可以领导多个其他人(当然,也肯能只领导一个人或是谁也不领导).其中只有一个例外:有一个老大(祖先),他是老大,他说了算,我们可以认为是他领导自己.因此,<code>f[r]==r</code>(r表示根,祖先,这里的老大).现在这里有很多这样的组织.</p>
+<p>有一天有两个人碰面了,他们想知道他们是不是在一个组织中,怎么办?只要看看他们是不是受同一个老大领导就好了.</p>
+<p>于是两个人就分别去问他们的领导,咱们老大是谁啊?如果他们的领导不是自己领导自己,那么他就不是老大.那就让领导去问领导的领导,直到问到一个人,他自己领导自己,那么他就是老大.他告诉来问自己的人:我就是老大!于是那个人知道了,再回去告诉来问自己的人:xxx就是老大.于是就这样一路传达,直到最初提问的那个人,于是他就知道了自己的老大就是xxx.</p>
+<p>两个人都知道了自己的老大是谁,那么只要看看老大是不是一个人就知道了.</p>
+<p>2.<strong>如何完成合并</strong></p>
+<p>现在假设我们被要求将x所在的集合和y所在的集合合并为一个集合.这也就意味着x所在集合中的任何元素的<em>祖先</em>必须被设定为与y中元素的<em>祖先</em>相同(反过来也可以).显然,如果逐个修改和朴素方法是没有区别的,我们考虑一个牵一发而动全身的方法:<strong>只要将x所在集合的祖先的父亲设为y所在集合的祖先,那么我们查询时的循环将不会在x的原祖先处停止,而会查询到y的祖先,而原y所在集合中的元素的祖先不会发生变化</strong>.</p>
+<p>这样,我们在合并时不再需要遍历,只需要找到两个集合的祖先并且使其中一个(k)成为另一个(l)的父亲,那k就成为了原来k和l的子树中的所有元素的共同祖先,而这只会让我们在查询时增加不超过1次.而我们发现这里又出现了寻找祖先的工作,同样交给我们的find函数.</p>
+<p>按照我们的分析,代码同样不难写出:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//省略掉find函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fx=find(x);</span><br><span class="line">	<span class="keyword">int</span> fy=find(y);</span><br><span class="line">	<span class="keyword">if</span>(fx==fy) <span class="keyword">return</span>;<span class="comment">//不进行无意义的合并</span></span><br><span class="line">	f[fx]=fy;<span class="comment">//反过来,f[fy]=fx也可以,看个人喜好</span></span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>继续按上文的例子理解一下:现在x和y所在的组织被要求合并成一个组织了.怎么办?我们只能让其中的一个老大屈尊,被另一个老大领导,那么就成为一个组织了.</p>
+<p>3.<strong>如何初始化</strong></p>
+<p>这是最简单的一步了.一开始任意两个元素都不在同一个集合中,那么各自都是自己的祖先(-_-||),只要让<code>f[i]=i</code>就可以了.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//省略n的定义并假设n中存储了总元素的量</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>umm…各自为战,我一个人就是一个组织…</p>
+<p>将之前的三部分中的所有函数组合在一起,定义数组f和变量n,我们就完成了并查集的初级实现,已经能正确的完成前面提到的操作了!为了美观和方便,我们将并查集写成一个结构体,将数组作为成员变量,并用<code>private</code>关键字保护,函数作为方法出现(由于没有直接查询祖先的需求,find函数将同样被加以保护):</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">10010</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">uf</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">private</span>:<span class="comment">//一般不能从结构体以外访问到</span></span><br><span class="line">	<span class="keyword">int</span> f[MAX];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(f[a]!=a) a=f[a];</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span>:<span class="comment">//允许从结构体外访问</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> find(x)==find(y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> fx=find(x);</span><br><span class="line">		<span class="keyword">int</span> fy=find(y);</span><br><span class="line">		<span class="keyword">if</span>(fx==fy) <span class="keyword">return</span>;</span><br><span class="line">		f[fx]=fy;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>完成了.可以正确的书写主函数,再去水一次<a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">259. 亲戚</a>.</p>
+<p>像这样:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">20010</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">uf</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> f[MAX];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(f[a]!=a) a=f[a];</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> find(x)==find(y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> fx=find(x);</span><br><span class="line">		<span class="keyword">int</span> fy=find(y);</span><br><span class="line">		<span class="keyword">if</span>(fx==fy) <span class="keyword">return</span>;</span><br><span class="line">		f[fx]=fy;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">uf f;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"relations.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"relations.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> m,x,y,q;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	f.init();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		f.join(x,y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		<span class="keyword">if</span>(f.check(x,y)) <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ummm…TLE…似乎受到欺骗,不是说我们能做的更好了吗?</p>
+<p>没错,所以我们这是基本实现.</p>
+<p>胡乱分析一下,显然存在一些特定的数据可以使我们的树变得很丑:长的像一条链.那么我们的运行速度就变得比未优化的链表的速度还慢:链表只需要遍历其中一条,而我们需要遍历两条.下面,我们将针对这种情况进行优化,我们可以看到如何用简洁的几条语句完成优化,甚至使我们的查询和合并的时间复杂度同时被优化到近似为$O(1)$.</p>
+<hr>
+<h2 id="高效并查集的实现"><a href="#高效并查集的实现" class="headerlink" title="高效并查集的实现"></a>高效并查集的实现</h2><p>相比并查集的初级实现,我们考虑从两个思路上出发进行优化,一个是之前使用过的,通过维护额外信息使得每次合并遍历尽量少的点,另一个则是之前没出现但同样直观的.</p>
+<h3 id="带权合并"><a href="#带权合并" class="headerlink" title="带权合并"></a>带权合并</h3><p>显然,由于每次find都需要找到祖先才会停止,而每次find运行时间正比于其进行循环的次数,而循环次数又取决于树的高度.因此,我们可以维护一个高度值.同样,我们规定一个元素所存储的高度是以这个元素为祖先的树的高度.</p>
+<p>合并时有两种情况:当两棵树高度不同时,我们选择将矮一些的树合并<strong>进</strong>高一些的树,其总高度不会发生变化(由于合并时将一棵树的根作为另一棵树的根的父亲,被合并进来的树中的节点到根的距离将全部加1,因此选择将更矮的树和并进更高的树,这样访问这棵树,寻找祖先时最多寻找的次数不会发生改变,也就是总高度不变);而当两棵树高度相同时,可以任意合并,但其高度会增加1.</p>
+<p>和链表实现的优化一样,这个优化同样只需要为数不多的语句:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">20010</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">uf</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> f[MAX];</span><br><span class="line">	<span class="keyword">int</span> h[MAX];<span class="comment">//新定义一个额外信息的数组</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(f[a]!=a) a=f[a];</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			f[i]=i;</span><br><span class="line">			h[i]=<span class="number">1</span>;<span class="comment">//初始化高度为1</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> find(x)==find(y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> fx=find(x);</span><br><span class="line">		<span class="keyword">int</span> fy=find(y);</span><br><span class="line">		<span class="keyword">if</span>(fx==fy) <span class="keyword">return</span>;</span><br><span class="line">		<span class="keyword">if</span>(h[fx]&gt;h[fy]) fx^=fy^=fx^=fy;<span class="comment">//保证h[fx]&lt;=h[fy]</span></span><br><span class="line">		f[fx]=fy;</span><br><span class="line">		<span class="keyword">if</span>(h[fx]==h[fy]) h[fy]++;<span class="comment">//如果两棵树高度相同那么合并后高度会增加1</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>再次尝试<a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">259. 亲戚</a>.(由于主函数没有修改,不再给出主函数的代码)</p>
+<p>我们又A掉了这道题.花费的时间和带优化的链表实现近似.</p>
+<h3 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h3><p>我们考虑我们这种表示的最优情况:我们当然希望任何的元素都的父亲都直接就是它的祖先.这似乎很难,但我们考虑一下,是否可以在查找的过程中完成这个操作.</p>
+<p>在查找时,我们会一路查找到祖先.那么,我们是否可能在找到祖先后<strong>将沿途经过的节点的父亲都设为找到的祖先</strong>?<br>不难想到这么一个东西:递归.</p>
+<p>接着用那些迷之组织来描述这一个过程.由于之前的方法找老大要经过他的手下,太麻烦了,老大希望精简管理层:所有人都由他直接领导.怎么办呢?他要求来询问自己(root)老大是谁的人(mid)在回答mid的手下(leaf)的时候,告诉leaf:以后我就不是你的领导了,我的领导以后就是你的领导了.这样,一次询问后,经过的所有人的领导就都变成了老大.計画通り.</p>
+<p>按照这个过程,运用递归,代码很好写,只用修改find方法就行了:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[a]!=a) <span class="keyword">return</span> f[a]=find(f[a]);<span class="comment">//当前的被询问的人不是老大,那么让他的领导再去询问,并在得知老大是谁后将自己的领导更改为原来的领导的领导(模拟一下其实就是老大)</span></span><br><span class="line">	<span class="keyword">return</span> a;<span class="comment">//"我就是老大"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还是两行,但运用递归完成了路径的压缩.现在,只要一个节点被查询过一遍,那么在下次合并之前,就可以在$O(1)$的时间内找到它的祖先.</p>
+<p>我们再去虐一下<a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">这道题</a>.</p>
+<p>同样A掉,时间和带权合并近似.</p>
+<h3 id="应用两种优化"><a href="#应用两种优化" class="headerlink" title="应用两种优化"></a>应用两种优化</h3><p>我们再来尝试一下同时应用两种优化.大概比只用一种优化快了$2ms$.</p>
+<p>实践证明,一般来说只要应用一种优化就足够了.其中路径压缩代码量极小,一半推荐使用,而带权合并可以提供额外信息,更适合要求回答或是进行其他操作时需要额外信息的情况使用.(当然,代码量也不大,我倾向于都用).</p>
+<p>完整代码如下(只有结构体的):</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">uf</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> f[MAX];</span><br><span class="line">	<span class="keyword">int</span> h[MAX];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(f[a]!=a) <span class="keyword">return</span> f[a]=find(f[a]);</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span><span class="comment">//为了增强泛用性,体现数据隐藏的严谨性,我们将n作为参数传入而不是使用全局变量</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			f[i]=i;</span><br><span class="line">			h[i]=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> find(x)==find(y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> fx=find(x);</span><br><span class="line">		<span class="keyword">int</span> fy=find(y);</span><br><span class="line">		<span class="keyword">if</span>(fx==fy) <span class="keyword">return</span>;</span><br><span class="line">		<span class="keyword">if</span>(h[fx]&gt;h[fy]) fx^=fy^=fx^=fy;</span><br><span class="line">		f[fx]=fy;</span><br><span class="line">		<span class="keyword">if</span>(h[fx]==h[fy]) h[fy]++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>至此,这样一种高效的数据结构的皮毛就已经基本被掌握了.我很喜欢这个数据结构,因为它强大高效但是代码量很小(而且不会写的太丑对于我来说简直就是福音w).</p>
+<hr>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p> 1.裸并查集</p>
+<p>  由于这些题目都是最基本的,没花样的并查集应用,一套代码就可以水个遍,就没有代码了.</p>
+<ul>
+<li><a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=259" target="_blank" rel="noopener">259. 亲戚</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P3367" target="_blank" rel="noopener">P3367 【模板】并查集</a></li>
+<li><p><a href="https://www.luogu.org/problemnew/show/P1551" target="_blank" rel="noopener">P1551 亲戚</a></p>
+<p>2.花样题</p>
+<p>这里的题很有意思,可能不是简单的并查集,需要思考和分析.(但请相信,这些题不需要其他的数据结构).题解会有,但是可能是有生之年,还是去看看别人的吧.</p>
+<ul>
+<li><a href="https://www.luogu.org/problemnew/show/P1525" target="_blank" rel="noopener">P1525 关押罪犯</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P1196" target="_blank" rel="noopener">P1196 [NOI2002]银河英雄传说</a></li>
+</ul>
+<p>umm暂时就这些了.</p>
+</li>
+</ul>
+<hr>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>简单的并查集是很简单的.而经过一些技巧性的操作,它可以很强大.但是它最大的特点仍是代码量极小而高效(即使是加上了技巧性的操作).</p>
+<p>更高级的操作?可持久化?ummm…还没研究,大概是有生之年了.</p>
+<p>请路过的大犇如果发现了我文中的错误或是不严谨的地方一定在评论中告诉我,感激不尽.</p>
+<p>本蒟蒻在此鞠躬. </p>
+<hr>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -284,203 +308,144 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://snake52996.github.io/Snake52996/2018/03/25/浅谈并查集/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/平衡树之Treap/" class="archive-article-date">
-  	<time datetime="2018-03-25T07:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/03/25/树链剖分学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          树链剖分学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/25/平衡树之Treap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">平衡树之Treap</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/平衡树之Treap/">平衡树之Treap</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">平衡树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随机算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#并查集的意义-需求"><span class="toc-number">1.</span> <span class="toc-text">并查集的意义(需求)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并查集的基本思想"><span class="toc-number">2.</span> <span class="toc-text">并查集的基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前置知识需求"><span class="toc-number">3.</span> <span class="toc-text">前置知识需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并查集的初级实现"><span class="toc-number">4.</span> <span class="toc-text">并查集的初级实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#并查集的数组实现"><span class="toc-number">4.1.</span> <span class="toc-text">并查集的数组实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#并查集的链表实现"><span class="toc-number">4.2.</span> <span class="toc-text">并查集的链表实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#并查集的有根树实现"><span class="toc-number">4.3.</span> <span class="toc-text">并查集的有根树实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高效并查集的实现"><span class="toc-number">5.</span> <span class="toc-text">高效并查集的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#带权合并"><span class="toc-number">5.1.</span> <span class="toc-text">带权合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路径压缩"><span class="toc-number">5.2.</span> <span class="toc-text">路径压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用两种优化"><span class="toc-number">5.3.</span> <span class="toc-text">应用两种优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例题"><span class="toc-number">6.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number"></span> <span class="toc-text">后记</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/二分图匹配/" class="archive-article-date">
-  	<time datetime="2018-03-25T07:13:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/二分图匹配/">二分图匹配</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">图算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二分图匹配</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">胡言乱语</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/关于这个蜜汁博客/" class="archive-article-date">
-  	<time datetime="2018-03-25T02:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/关于这个蜜汁博客/">关于这个蜜汁博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/24/hello world and new plan/" class="archive-article-date">
-  	<time datetime="2018-03-24T12:12:51.040Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/24/hello world and new plan/">Hello World and New Plan</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Sun Mar 25 2018 15:54:21 GMT+0800",
+  owner: 'Snake52996',
+  repo: 'Snake52996.github.io',
+  oauth: {
+    client_id: 'd44fc80c682f38fbda62',
+    client_secret: '93700daf551a6f651070592c1e4c81aee3b8f2f9',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -503,8 +468,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

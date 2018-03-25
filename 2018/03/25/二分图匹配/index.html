@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://snake52996.github.io/Snake52996">
-  <title>Archives: 2018 | Snake的随波逐流</title>
+  <title>二分图匹配 | Snake的随波逐流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个蒟蒻的小站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Snake的随波逐流">
-<meta property="og:url" content="https://snake52996.github.io/Snake52996/archives/2018/index.html">
+  <meta name="description" content="umm,本来是作业,介绍一个自己感兴趣的知识,于是写了篇画风诡异的,懒得改了,直接当我的二分图匹配的匈牙利算法的学习笔记吧(怠惰哦)(我完全不知道卡什是谁…)  さあ、王の話をするとしよう！ 来讲一个王的故事吧.">
+<meta name="keywords" content="图算法,二分图匹配,胡言乱语">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二分图匹配">
+<meta property="og:url" content="https://snake52996.github.io/Snake52996/2018/03/25/二分图匹配/index.html">
 <meta property="og:site_name" content="Snake的随波逐流">
-<meta property="og:description" content="一个蒟蒻的小站">
+<meta property="og:description" content="umm,本来是作业,介绍一个自己感兴趣的知识,于是写了篇画风诡异的,懒得改了,直接当我的二分图匹配的匈牙利算法的学习笔记吧(怠惰哦)(我完全不知道卡什是谁…)  さあ、王の話をするとしよう！ 来讲一个王的故事吧.">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://img.blog.csdn.net/20180311172324187">
+<meta property="og:image" content="http://img.blog.csdn.net/20180311173241748">
+<meta property="og:image" content="http://img.blog.csdn.net/20180311173606111">
+<meta property="og:updated_time" content="2018-03-25T07:38:57.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snake的随波逐流">
-<meta name="twitter:description" content="一个蒟蒻的小站">
+<meta name="twitter:title" content="二分图匹配">
+<meta name="twitter:description" content="umm,本来是作业,介绍一个自己感兴趣的知识,于是写了篇画风诡异的,懒得改了,直接当我的二分图匹配的匈牙利算法的学习笔记吧(怠惰哦)(我完全不知道卡什是谁…)  さあ、王の話をするとしよう！ 来讲一个王的故事吧.">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20180311172324187">
   
     <link rel="alternative" href="/atom.xml" title="Snake的随波逐流" type="application/atom+xml">
   
@@ -139,228 +145,140 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-二分图匹配" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/读写挂测试与怀疑人生/" class="archive-article-date">
-  	<time datetime="2018-03-25T08:52:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/读写挂测试与怀疑人生/">读写挂测试与怀疑人生</a>
+    <h1 class="article-title" itemprop="name">
+      二分图匹配
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">胡言乱语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实验</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">奇技淫巧</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读写优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/树链剖分学习笔记/" class="archive-article-date">
-  	<time datetime="2018-03-25T08:10:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/树链剖分学习笔记/">树链剖分学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">暴力</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/浅谈并查集/" class="archive-article-date">
-  	<time datetime="2018-03-25T07:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/浅谈并查集/">浅谈并查集</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">并查集</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/平衡树之Treap/" class="archive-article-date">
-  	<time datetime="2018-03-25T07:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/平衡树之Treap/">平衡树之Treap</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">平衡树</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随机算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/二分图匹配/" class="archive-article-date">
+        
+        <a href="/2018/03/25/二分图匹配/" class="archive-article-date">
   	<time datetime="2018-03-25T07:13:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/二分图匹配/">二分图匹配</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>umm,本来是作业,介绍一个自己感兴趣的知识,于是写了篇画风诡异的,懒得改了,直接当我的二分图匹配的匈牙利算法的学习笔记吧(怠惰哦)<del>(我完全不知道卡什是谁…)</del></p>
+<hr>
+<p>さあ、王の話をするとしよう！</p>
+<p>来讲一个王的故事吧.</p>
+<hr>
+<a id="more"></a>
+<h2 id="降临"><a href="#降临" class="headerlink" title="降临"></a>降临</h2><p>众所周知,情人节快到了.</p>
+<p>什么?情人节已经过了?没关系,我们加一个定语.</p>
+<p>众所周知,<em>月球人</em>的情人节快到了.</p>
+<p>更加充分一点:</p>
+<p>众所周知,<em>生活在中国的月球人</em>的情人节快到了.</p>
+<p>在这段万众瞩目的时间里,恐怕会发生很多很有意思的事情吧.</p>
+<p>但不幸的是,本该在这期间有所行动的人们很多还不知道该将目标指向谁.</p>
+<p>而幸运的是,你出现了.你有一个大胆的设想:按照身边人相互的好感关系,将尽可能多对相互都有好感的男女(忽略其他情况)”匹配”在一起,造福大众!</p>
+<p>等等,哪里不对吧.你如何准确的得知身边的人中,谁和谁互有好感?</p>
+<p>再等等,为什么你要干这种事?为了自己附近方圆百米只有自己一条单身狗?”旺旺”?似乎解释不通.</p>
+<p>让我们来修改一下设定.</p>
+<p>你是一个来拯救迷茫的人们的迷之造访者(喂,迷字用得多了点).你用卡什之眼(???)的力量得知了所需要的好感关系.你要做的还是一样,将尽可能多对相互都有好感的男女”匹配”在一起,造福大众,让他们铭记你,感激你,赞颂你.</p>
+<h2 id="然而"><a href="#然而" class="headerlink" title="然而"></a>然而</h2><p>然而在你提出这个大胆的构想之后,你终于发现,你太天真了.虽然身边的人不多,只有$10^1$数量级,但是他们之间的关系最多可以达到$10^2$数量级.而这些关系之间还会互相影响,实在是太过复杂,对于年幼而不擅长数学的你,实在是有些强人所难了.但是之前你已经说过了,”包在我身上了”,看来是没办法了.终究还是不行.</p>
+<h2 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h2><p>就在你几乎放弃的时候,你听说了一种魔术形式:程序.这是一种运行于被称为计算机的魔术介质上的一种东西.使用被正确配置的程序可以迅速完成需要的计算,即使需要考虑的情况复杂.正是智慧,力量,魔术的完美结合.你的眼中仿佛出现了高光.希望!看到希望了!终究,我还是要成为被称颂的王的人!</p>
+<h2 id="希望背后"><a href="#希望背后" class="headerlink" title="希望背后"></a>希望背后</h2><p>当你找到了新世界大门的时候,难以抑制的兴奋感迎面而来.但是,你突然意识到:你没有新世界大门的钥匙.虽然整个方法是存在的,利用那种魔术可以解决这个问题,但你没能力完成它的前提:你没法绘制出正确配置的程序.看着新世界的大门,上面的锁孔,高光消失了.终究还是无能为力…吗?</p>
+<h2 id="指引"><a href="#指引" class="headerlink" title="指引"></a>指引</h2><p>“即使这样说显得很自作多情,但我还是要说,那就是命运的邂逅.”<br>那时,你,和一个至今还不知从哪里来,到哪里去,为了什么而出现的,自称梅莉的人物,邂逅于门前.</p>
+<p>“哦哦,这样啊,我了~解了.我问你,如果一定要你自己完成的话,你会怎么做呢?比如像这样~?”<br>梅莉边说边画出了一幅简单的关系图,问道.</p>
+<p><img src="http://img.blog.csdn.net/20180311172324187" alt="二分图匹配的简单例子1"></p>
+<p>[解说:图上左边的点分别表示男一,男二,男三,男四,右边的是女一,女二,女三,女四(心疼女四半秒),线表示两人<em>互有好感</em>]</p>
+<p>“嗯…这张图倒是简单.那么,先把男一和女一分配到一起吧.”</p>
+<p>“正解!下面呢?”</p>
+<p>“嗯,那么再把男二和女二配成一对吧!”</p>
+<p>“嗯,嗯.”</p>
+<p><img src="http://img.blog.csdn.net/20180311173241748" alt="二分图匹配的简单例子2"></p>
+<p>“下面的话,男三…啊,和男三有好感的都被配上对了!怎么办啊!”</p>
+<p>“没关系啊,我们将之前的配对断键,试着给男三也配对啊”</p>
+<p>“哦,那么我看看…女二和男二成键了…女二还可以和…诶?女一也被分配过了!”</p>
+<p>“嗯~,那么,怎么办呢?我们手中似乎已经有了足够的工具解决这个问题了哦~“</p>
+<p>“莫非,对于<em>目标已经被分配了的</em>男二,<em>用同样的方法</em>在进行一次吗?”</p>
+<p>“完全正确!这就是所谓的<strong>递归</strong>啊!”</p>
+<p>“再重新为男二查找,再为男一查找…啊,男一可以和女三配对,那么男二就可以和女一,男三就可以和女二了!”</p>
+<p><img src="http://img.blog.csdn.net/20180311173606111" alt="二分图匹配的简单例子3"></p>
+<p>“果然<em>被选中的人</em>最棒了!”</p>
+<p>“嗯!…嗯?”</p>
+<p>“没,没什么.看,看男四怎么办!”</p>
+<p>“男四…无论怎么调整都不能配上对啊…看来需要心疼的不只是女四啊…”</p>
+<p>“嗯,没错!这样,这个问题就解决了哦~❤”</p>
+<p>“喂,为什么用那种令人起疑的语气!”</p>
+<p>“ひみつ.”</p>
+<h2 id="曙光-amp-王座"><a href="#曙光-amp-王座" class="headerlink" title="曙光&amp;王座"></a>曙光&amp;王座</h2><p>似乎,知道了啊.</p>
+<p>虽然很后悔没能在那个自称梅莉的人离开之前多和她说上几句话,但是至少找到了解决的方法.还真是要谢谢她.嗯…还是有些在意,有些细节…</p>
+<p>于是,在掌握了解决问题的方法之后,你又经过了一段时间的研究,掌握了刻画能够在魔法介质上工作的魔术的方法.终于,能实现了.</p>
+<p>你叫来了那些人,向他们展示了自己的成果,并解释了一些细节.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//每个人本有一个编号</span></span><br><span class="line"><span class="comment">//但是为了能够处理问题</span></span><br><span class="line"><span class="comment">//必须将男女分别从1到n(男生数),m(女生数)编号</span></span><br><span class="line"><span class="comment">//因此需要对照表</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> id[]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">10</span>,<span class="number">13</span>,<span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">21</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>,<span class="number">26</span>,<span class="number">27</span>,<span class="number">32</span>,<span class="number">35</span>,<span class="number">36</span>,<span class="number">38</span>,<span class="number">41</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">20</span>,<span class="number">22</span>,<span class="number">28</span>,<span class="number">29</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">33</span>,<span class="number">34</span>,<span class="number">37</span>,<span class="number">39</span>,<span class="number">40</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">1010</span>&lt;&lt;<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;    <span class="comment">//意义见上面</span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">map</span>[MAX][MAX];  <span class="comment">//用于表示关系</span></span><br><span class="line"><span class="keyword">int</span> pi_bond[MAX];   <span class="comment">//记录配对的人是谁</span></span><br><span class="line"><span class="keyword">bool</span> failed[MAX];</span><br><span class="line"><span class="comment">//一次寻找中如果某个人无法重新配对</span></span><br><span class="line"><span class="comment">//那么这次寻找中他将始终无法重新配对</span></span><br><span class="line"><span class="comment">//因此加以记录可以节省时间</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>    <span class="comment">//为男x配对.返回是否成功</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n+<span class="number">1</span>;i&lt;=n+m;i++) <span class="keyword">if</span>(<span class="built_in">map</span>[x][i])   <span class="comment">//尝试每个可能情况</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(!pi_bond[i])</span><br><span class="line">		&#123;</span><br><span class="line">			pi_bond[i]=x;   <span class="comment">//男x与女i配对成功</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!failed[i])  <span class="comment">//可能能重新配对</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(pi_bond[i]!=x &amp;&amp; find(pi_bond[i]))&#123;</span><br><span class="line">				pi_bond[i]=x;   <span class="comment">//重新配对成功了</span></span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				failed[i]=<span class="number">1</span>;    <span class="comment">//失败了</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;   <span class="comment">//完全不行啊</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y,e;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;e);    <span class="comment">//读入男女数和关系数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=e;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);    <span class="comment">//男x与女y互有好感</span></span><br><span class="line">		<span class="keyword">if</span>(y&lt;=m) <span class="built_in">map</span>[x][n+y]=<span class="number">1</span>;  <span class="comment">//记录</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;  <span class="comment">//记录最大匹配数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)   <span class="comment">//为男1到男n尝试匹配</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(failed,<span class="number">0</span>,<span class="keyword">sizeof</span>(failed));</span><br><span class="line">		<span class="comment">//上次不可能再次分配的这次不一定</span></span><br><span class="line">		<span class="comment">//因此要还原</span></span><br><span class="line">		<span class="keyword">if</span>(find(i)) ans++;  <span class="comment">//如果成功了的话就累加</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nsum=%d\n"</span>,ans); <span class="comment">//告诉大家能匹配多少对</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(pi_bond[n+i]) <span class="built_in">printf</span>(<span class="string">"%d with %d\n"</span>,id[n+i],id[pi_bond[n+i]]);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d single all the way.\n"</span>,id[n+i]);</span><br><span class="line">		<span class="comment">//对每对,女前男后的输出其原始编号</span></span><br><span class="line">		<span class="comment">//对于没成功匹配的,输出...</span></span><br><span class="line">		<span class="comment">//没成功匹配的男x,抱歉,不会提到你的</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着,你拿出了你用卡什之眼的力量(???)得到的关系表(万万没想到这有这么点):</p>
+<blockquote>
+<p>21 20 5</p>
+<p>4 1</p>
+<p>4 15</p>
+<p>5 10</p>
+<p>9 15</p>
+<p>16 5</p>
+</blockquote>
+<p>然后将表提供给了设置好的程序.不负众望,你得到了结果!</p>
+<blockquote>
+<p>sum=4</p>
+<p>4 with 6</p>
+<p>5 single all the way.</p>
+<p>8 single all the way.</p>
+<p>9 single all the way.</p>
+<p>11 with 27</p>
+<p>12 single all the way.</p>
+<p>14 single all the way.</p>
+<p>15 single all the way.</p>
+<p>17 single all the way.</p>
+<p>19 with 7</p>
+<p>20 single all the way.</p>
+<p>22 single all the way.</p>
+<p>28 single all the way.</p>
+<p>29 single all the way.</p>
+<p>30 with 18</p>
+<p>31 single all the way.</p>
+<p>33 single all the way.</p>
+<p>34 single all the way.</p>
+<p>37 single all the way.</p>
+<p>39 single all the way.</p>
+</blockquote>
+<p>人们在欢呼.仿佛划破黑暗的曙光.</p>
+<p><strong>而你,将加冕为王</strong></p>
+<h2 id="卡什之眼"><a href="#卡什之眼" class="headerlink" title="卡什之眼"></a>卡什之眼</h2><p>你曾加冕为王.</p>
+<p>然而,你得到的是不完全的关系图.而且最致命的是,这甚至并非是严格的”互有好感”,而只是<strong>单方面</strong>的.(真是悲伤).<br>(不过你想想,卡什之眼什么的这种东西靠谱吗)</p>
+<p>你离开了王座,和一位名叫akua的神见了面.</p>
+<p>但你留下的处理这种问题的方法被人铭记,并称之为”匈牙利算法”.(真是可惜,连冠名的机会都没有).</p>
+<p>人们仍不知道,你那天所见的,自称为梅莉的人,的真实身份.</p>
+<p>完.</p>
+<hr>
+<h2 id="梅莉"><a href="#梅莉" class="headerlink" title="梅莉"></a>梅莉</h2><p>“这就是王的故事.王是不幸的.他依赖了错误的力量(所以说卡什之眼究竟是个什么鬼啊),而且最严重的是,他错误的配置了那个魔术而自己还浑然不觉.”</p>
+<p>“哦?是吗?究竟是哪里?”认真听着眼前的迷之少女讲述的王的故事的你并没有注意到问题出现在了哪里.</p>
+<p>“哈,还没看出来吗?仔细想想,会不会出现一个元素被匹配多次的情况?嘿嘿,说多了就没意思了~”</p>
+<p>“好像是这样诶.那么,其实应该怎么配置?”</p>
+<p>“像这样就可以了哦”</p>
+<p>少女随手摆出了这样的东西.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//每个人本有一个编号</span></span><br><span class="line"><span class="comment">//但是为了能够处理问题</span></span><br><span class="line"><span class="comment">//必须将男女分别从1到n(男生数),m(女生数)编号</span></span><br><span class="line"><span class="comment">//因此需要对照表</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> id[]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">10</span>,<span class="number">13</span>,<span class="number">16</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">21</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>,<span class="number">26</span>,<span class="number">27</span>,<span class="number">32</span>,<span class="number">35</span>,<span class="number">36</span>,<span class="number">38</span>,<span class="number">41</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">20</span>,<span class="number">22</span>,<span class="number">28</span>,<span class="number">29</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">33</span>,<span class="number">34</span>,<span class="number">37</span>,<span class="number">39</span>,<span class="number">40</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX=<span class="number">1010</span>&lt;&lt;<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;    <span class="comment">//意义见上面</span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">map</span>[MAX][MAX];  <span class="comment">//用于表示关系</span></span><br><span class="line"><span class="keyword">int</span> pi_bond[MAX];   <span class="comment">//记录配对的人是谁</span></span><br><span class="line"><span class="keyword">bool</span> visited[MAX];	<span class="comment">//在本次搜索中是否被访问过</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>    <span class="comment">//为男x配对.返回是否成功</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n+<span class="number">1</span>;i&lt;=n+m;i++) <span class="keyword">if</span>(<span class="built_in">map</span>[x][i] &amp;&amp; !visited[i])   <span class="comment">//尝试每个可能情况</span></span><br><span class="line">	&#123;</span><br><span class="line">		visited[i]=<span class="number">1</span>;<span class="comment">//标记已访问</span></span><br><span class="line">		<span class="keyword">if</span>(!pi_bond[i] || find(pi_bond[i]))<span class="comment">//i未匹配或是可以重新匹配</span></span><br><span class="line">		&#123;</span><br><span class="line">			pi_bond[i]=x;   <span class="comment">//男x与女i配对成功</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;   <span class="comment">//完全不行啊</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y,e;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;e);    <span class="comment">//读入男女数和关系数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=e;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);    <span class="comment">//男x与女y互有好感</span></span><br><span class="line">		<span class="keyword">if</span>(y&lt;=m) <span class="built_in">map</span>[x][n+y]=<span class="number">1</span>;  <span class="comment">//记录</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;  <span class="comment">//记录最大匹配数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)   <span class="comment">//为男1到男n尝试匹配</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(visited,<span class="number">0</span>,<span class="keyword">sizeof</span>(visited));</span><br><span class="line">		<span class="comment">//上次不可能再次分配的这次不一定</span></span><br><span class="line">		<span class="comment">//因此要还原</span></span><br><span class="line">		<span class="keyword">if</span>(find(i)) ans++;  <span class="comment">//如果成功了的话就累加</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nsum=%d\n"</span>,ans); <span class="comment">//告诉大家能匹配多少对</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(pi_bond[n+i]) <span class="built_in">printf</span>(<span class="string">"%d with %d\n"</span>,id[n+i],id[pi_bond[n+i]]);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d single all the way.\n"</span>,id[n+i]);</span><br><span class="line">		<span class="comment">//对每对,女前男后的输出其原始编号</span></span><br><span class="line">		<span class="comment">//对于没成功匹配的,输出...</span></span><br><span class="line">		<span class="comment">//没成功匹配的男x,抱歉,不会提到你的</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>“像这样稍加修改,避免在<strong>一次匹配中</strong>出现<strong>重复访问同一个元素</strong>的情况,就能得到正确的结果了.”</p>
+<p>看着她毫不费力的展示如此复杂的东西,你被折服了.你情不自禁的问出:”我能否有幸耳闻您的大名?”</p>
+<p>银铃般的笑声.<br>“你可以称呼我为<strong>梅莉</strong>哦~❤”</p>
+<p>完….?</p>
+<hr>
+<p>umm……脑洞起来停不下来了.就这么着吧.故事(胡言乱语)算是结束了,脑洞填完了.</p>
+<p>蒟蒻而且文笔极差的我在此鞠躬.无论是谁出于什么原因,感谢你看到这里.希望这个故事还算有趣.</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -380,107 +298,144 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://snake52996.github.io/Snake52996/2018/03/25/二分图匹配/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/25/关于这个蜜汁博客/" class="archive-article-date">
-  	<time datetime="2018-03-25T02:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/03/25/平衡树之Treap/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          平衡树之Treap
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/25/关于这个蜜汁博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于这个蜜汁博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/关于这个蜜汁博客/">关于这个蜜汁博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#降临"><span class="toc-number">1.</span> <span class="toc-text">降临</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#然而"><span class="toc-number">2.</span> <span class="toc-text">然而</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转机"><span class="toc-number">3.</span> <span class="toc-text">转机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#希望背后"><span class="toc-number">4.</span> <span class="toc-text">希望背后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指引"><span class="toc-number">5.</span> <span class="toc-text">指引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#曙光-amp-王座"><span class="toc-number">6.</span> <span class="toc-text">曙光&amp;王座</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卡什之眼"><span class="toc-number">7.</span> <span class="toc-text">卡什之眼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#梅莉"><span class="toc-number">8.</span> <span class="toc-text">梅莉</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/24/hello world and new plan/" class="archive-article-date">
-  	<time datetime="2018-03-24T12:12:51.040Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/24/hello world and new plan/">Hello World and New Plan</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Sun Mar 25 2018 15:13:19 GMT+0800",
+  owner: 'Snake52996',
+  repo: 'Snake52996.github.io',
+  oauth: {
+    client_id: 'd44fc80c682f38fbda62',
+    client_secret: '93700daf551a6f651070592c1e4c81aee3b8f2f9',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -503,8 +458,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
