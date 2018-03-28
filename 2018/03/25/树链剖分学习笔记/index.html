@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="树,树算法,暴力," />
+  <meta name="keywords" content="树算法,暴力,树," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="前些日子在洛谷上写LCA的时候用倍增算法被卡常数了,一气之下就去查了其他的LCA算法,看到tarjan和树剖都能解决这个问题,于是就选择了学习树剖这条(不归之)路. 以上全是废话">
-<meta name="keywords" content="树,树算法,暴力">
+<meta name="keywords" content="树算法,暴力,树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树链剖分学习笔记">
 <meta property="og:url" content="https://snake52996.github.io/Snake52996/2018/03/25/树链剖分学习笔记/index.html">
@@ -325,6 +325,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/25/树链剖分学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/25/树链剖分学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -500,11 +510,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/树/" rel="tag"># 树</a>
-          
             <a href="/tags/树算法/" rel="tag"># 树算法</a>
           
             <a href="/tags/暴力/" rel="tag"># 暴力</a>
+          
+            <a href="/tags/树/" rel="tag"># 树</a>
           
         </div>
       
@@ -558,6 +568,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
   
   
@@ -649,9 +662,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3481998052&site=qq&menu=yes" target="_blank" title="QQ">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3481998052&site=qq&menu=yes" target="_blank" title="qq">
                       
-                        <i class="fa fa-fw fa-globe"></i>QQ</a>
+                        <i class="fa fa-fw fa-globe"></i>qq</a>
                   </span>
                 
                   <span class="links-of-author-item">
@@ -886,6 +899,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'aohaPtjPkpmHIBWXC0o1leb3-gzGzoHsz',
+        appKey: 'YyTkR41sQrR4KCpQKaf88XpC',
+        placeholder: '王の話をするとしよう!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'20' || 10,
+    });
+  </script>
 
 
 

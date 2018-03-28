@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Snake的随波逐流">
 <meta property="og:description" content="这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T07:31:49.852Z">
+<meta property="og:updated_time" content="2018-03-28T13:07:00.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于这个蜜汁博客">
 <meta name="twitter:description" content="这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧.">
@@ -320,6 +320,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/25/关于这个蜜汁博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/25/关于这个蜜汁博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -468,6 +478,9 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+  
   
   
 
@@ -549,9 +562,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3481998052&site=qq&menu=yes" target="_blank" title="QQ">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3481998052&site=qq&menu=yes" target="_blank" title="qq">
                       
-                        <i class="fa fa-fw fa-globe"></i>QQ</a>
+                        <i class="fa fa-fw fa-globe"></i>qq</a>
                   </span>
                 
                   <span class="links-of-author-item">
@@ -770,6 +783,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'aohaPtjPkpmHIBWXC0o1leb3-gzGzoHsz',
+        appKey: 'YyTkR41sQrR4KCpQKaf88XpC',
+        placeholder: '王の話をするとしよう!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'20' || 10,
+    });
+  </script>
 
 
 
