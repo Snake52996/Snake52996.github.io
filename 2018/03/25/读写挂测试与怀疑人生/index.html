@@ -12,7 +12,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script> (function(){ if(''){ if (prompt('请输入文章密码') !== ''){ alert('密码错误！'); history.back(); } } })(); </script>
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -87,7 +95,7 @@
 <meta property="og:site_name" content="Snake的随波逐流">
 <meta property="og:description" content="众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:  “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了”  然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T09:22:15.284Z">
+<meta property="og:updated_time" content="2018-03-29T14:17:46.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读写挂测试与怀疑人生">
 <meta name="twitter:description" content="众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:  “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了”  然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.">
@@ -196,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于我
+            关于
           </a>
         </li>
       
@@ -216,7 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            时间轴
           </a>
         </li>
       
@@ -226,7 +234,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            无关联评论区
+            站点评论区
           </a>
         </li>
       
@@ -356,6 +364,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -426,6 +439,12 @@
     
     
     
+	
+	<div>
+      
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/03/25/读写挂测试与怀疑人生/">读写挂测试与怀疑人生</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年03月25日 - 16:03</p> <p><span>最后更新:</span>2018年03月29日 - 22:03</p> <p><span>原始链接:</span><a href="/2018/03/25/读写挂测试与怀疑人生/" title="读写挂测试与怀疑人生">https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+      
+	</div>
 
     
 
@@ -466,13 +485,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/胡言乱语/" rel="tag"># 胡言乱语</a>
+            <a href="/tags/胡言乱语/" rel="tag"><i class="fa fa-tag"></i> 胡言乱语</a>
           
-            <a href="/tags/实验/" rel="tag"># 实验</a>
+            <a href="/tags/实验/" rel="tag"><i class="fa fa-tag"></i> 实验</a>
           
-            <a href="/tags/奇技淫巧/" rel="tag"># 奇技淫巧</a>
+            <a href="/tags/奇技淫巧/" rel="tag"><i class="fa fa-tag"></i> 奇技淫巧</a>
           
-            <a href="/tags/读写优化/" rel="tag"># 读写优化</a>
+            <a href="/tags/读写优化/" rel="tag"><i class="fa fa-tag"></i> 读写优化</a>
           
         </div>
       
@@ -553,7 +572,7 @@
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
+            站点概况
           </li>
         </ul>
       
@@ -632,6 +651,12 @@
 
           
           
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
 
           
           
@@ -685,7 +710,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -695,20 +721,32 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
-
-
-
-
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客共计23.7k字</span>
+</div>
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 

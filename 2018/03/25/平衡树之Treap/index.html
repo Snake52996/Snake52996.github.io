@@ -12,7 +12,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script> (function(){ if(''){ if (prompt('请输入文章密码') !== ''){ alert('密码错误！'); history.back(); } } })(); </script>
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -88,7 +96,7 @@
 <meta property="og:description" content="Treap,很奇怪的名字.但是如果能拆成Tree+heap,那么就好理解了:既是树(二叉搜索树),又是堆(最大最小随意,本文中将使用最小堆). Treap是非常暴力的一种平衡树实现,它利用一个随机值,在按照二叉搜索树的规则插入元素之后再(如果必要)通过旋转维持堆的性质,提供不确定的变形机会,避免出现树高为$O(n)$的最坏情况.事实上,Treap的期望高度为$O(log\;n)$.因为暴力,所以其">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20180311205736807">
-<meta property="og:updated_time" content="2018-03-25T07:57:36.651Z">
+<meta property="og:updated_time" content="2018-03-29T14:18:09.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="平衡树之Treap">
 <meta name="twitter:description" content="Treap,很奇怪的名字.但是如果能拆成Tree+heap,那么就好理解了:既是树(二叉搜索树),又是堆(最大最小随意,本文中将使用最小堆). Treap是非常暴力的一种平衡树实现,它利用一个随机值,在按照二叉搜索树的规则插入元素之后再(如果必要)通过旋转维持堆的性质,提供不确定的变形机会,避免出现树高为$O(n)$的最坏情况.事实上,Treap的期望高度为$O(log\;n)$.因为暴力,所以其">
@@ -198,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于我
+            关于
           </a>
         </li>
       
@@ -218,7 +226,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            时间轴
           </a>
         </li>
       
@@ -228,7 +236,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            无关联评论区
+            站点评论区
           </a>
         </li>
       
@@ -358,6 +366,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -468,6 +481,12 @@
     
     
     
+	
+	<div>
+      
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/03/25/平衡树之Treap/">平衡树之Treap</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年03月25日 - 15:03</p> <p><span>最后更新:</span>2018年03月29日 - 22:03</p> <p><span>原始链接:</span><a href="/2018/03/25/平衡树之Treap/" title="平衡树之Treap">https://snake52996.github.io/Snake52996/2018/03/25/平衡树之Treap/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/Snake52996/2018/03/25/平衡树之Treap/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+      
+	</div>
 
     
 
@@ -508,13 +527,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
           
-            <a href="/tags/树/" rel="tag"># 树</a>
+            <a href="/tags/树/" rel="tag"><i class="fa fa-tag"></i> 树</a>
           
-            <a href="/tags/平衡树/" rel="tag"># 平衡树</a>
+            <a href="/tags/平衡树/" rel="tag"><i class="fa fa-tag"></i> 平衡树</a>
           
-            <a href="/tags/随机算法/" rel="tag"># 随机算法</a>
+            <a href="/tags/随机算法/" rel="tag"><i class="fa fa-tag"></i> 随机算法</a>
           
         </div>
       
@@ -599,7 +618,7 @@
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
+            站点概况
           </li>
         </ul>
       
@@ -678,6 +697,12 @@
 
           
           
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
 
           
           
@@ -731,7 +756,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -741,20 +767,32 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
-
-
-
-
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客共计23.7k字</span>
+</div>
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
