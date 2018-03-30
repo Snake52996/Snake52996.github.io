@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="胡言乱语,实验,奇技淫巧,读写优化," />
+  <meta name="keywords" content="算法,图,网络流,最大流," />
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:  “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了”  然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.">
-<meta name="keywords" content="胡言乱语,实验,奇技淫巧,读写优化">
+<meta name="description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解. 因此,掌握一种快速求解最大流问题的算法就异常重要了">
+<meta name="keywords" content="算法,图,网络流,最大流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="读写挂测试与怀疑人生">
-<meta property="og:url" content="https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/index.html">
+<meta property="og:title" content="最大流算法之ISAP">
+<meta property="og:url" content="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/index.html">
 <meta property="og:site_name" content="Snake的随波逐流">
-<meta property="og:description" content="众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:  “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了”  然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.">
+<meta property="og:description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解. 因此,掌握一种快速求解最大流问题的算法就异常重要了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-29T14:17:46.730Z">
+<meta property="og:updated_time" content="2018-03-30T14:09:40.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读写挂测试与怀疑人生">
-<meta name="twitter:description" content="众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:  “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了”  然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.">
+<meta name="twitter:title" content="最大流算法之ISAP">
+<meta name="twitter:description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解. 因此,掌握一种快速求解最大流问题的算法就异常重要了">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/"/>
+  <link rel="canonical" href="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/"/>
 
 
 
 
 
-  <title>读写挂测试与怀疑人生 | Snake的随波逐流</title>
+  <title>最大流算法之ISAP | Snake的随波逐流</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/">
+    <link itemprop="mainEntityOfPage" href="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Snake">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">读写挂测试与怀疑人生</h1>
+          <h1 class="post-title" itemprop="name headline">最大流算法之ISAP</h1>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T16:52:44+08:00">
-                2018-03-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T21:32:57+08:00">
+                2018-03-30
               </time>
             
 
@@ -353,8 +353,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/25/读写挂测试与怀疑人生/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/25/读写挂测试与怀疑人生/" itemprop="commentCount"></span>
+                <a href="/2018/03/30/最大流算法之ISAP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/30/最大流算法之ISAP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,53 +387,19 @@
       
 
       
-        <p>众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样:</p>
-<blockquote>
-<p>“这道题时间复杂度没问题,怎么调都TLE”</p>
-<p>“卡卡常就过了/优化优化常数就过了”</p>
-</blockquote>
-<p>然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了.</p>
-<a id="more"></a>
-<h2 id="经验告诉我们…"><a href="#经验告诉我们…" class="headerlink" title="经验告诉我们…"></a>经验告诉我们…</h2><p>一般来说,c++中的各种方式进行读写的速度对比是这样的:v(cin,cout)&lt;v(cin,cout(关闭流同步))&lt;v(scanf,printf)&lt;v(读写挂).针对这一点,我进行了一些测试(然后开始怀疑人生)</p>
-<h4 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h4><p>我采用了一个极为简单的程序随机生成$10^6$个整数存入文件,作为测试用的数据.程序代码如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	srand(time(<span class="number">0</span>));</span><br><span class="line">	freopen(<span class="string">"data.in"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;i++) <span class="built_in">printf</span>(<span class="string">"%d "</span>,rand());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="对cin与cout进行测试"><a href="#对cin与cout进行测试" class="headerlink" title="对cin与cout进行测试"></a>对cin与cout进行测试</h4><p>首先我使用cin和cout对测试数据进行读入并立刻输出至标准输出,用<code>ctime</code>中的<code>clock()</code>函数计时,并将运行时间写入文件.代码如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ifstream <span class="title">fin</span><span class="params">(<span class="string">"data.in"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">fout</span><span class="params">(<span class="string">"test1.out"</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> time0=clock();</span><br><span class="line">	<span class="keyword">int</span> tmp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fin&gt;&gt;tmp;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;tmp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	fout&lt;&lt;<span class="string">"Cost "</span>&lt;&lt;(<span class="keyword">int</span>)((clock()-time0)/CLOCKS_PER_SEC*<span class="number">1000</span>)&lt;&lt;<span class="string">"ms."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在测试后我得到了这样的结果:</p>
-<blockquote>
-<p>Cost 129151ms.</p>
-</blockquote>
-<p>共花费了129151毫秒,约129秒,2分钟.</p>
-<h4 id="对关闭流同步的cin与cout进行测试"><a href="#对关闭流同步的cin与cout进行测试" class="headerlink" title="对关闭流同步的cin与cout进行测试"></a>对关闭流同步的cin与cout进行测试</h4><p>我同样使用cin和cout对测试数据进行读入并立刻输出至标准输出,用<code>ctime</code>中的<code>clock()</code>函数计时,并将运行时间写入文件,但这次在开始之前我先关闭了cin,cout与stdio的同步,因为这个同步操作将带来不小的时间开销.代码如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ifstream <span class="title">fin</span><span class="params">(<span class="string">"data.in"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">fout</span><span class="params">(<span class="string">"test2.out"</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);	<span class="comment">//关闭流同步</span></span><br><span class="line">	<span class="keyword">double</span> time0=clock();</span><br><span class="line">	<span class="keyword">int</span> tmp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fin&gt;&gt;tmp;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;tmp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	fout&lt;&lt;<span class="string">"Cost "</span>&lt;&lt;(<span class="keyword">int</span>)((clock()-time0)/CLOCKS_PER_SEC*<span class="number">1000</span>)&lt;&lt;<span class="string">"ms."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在测试后我得到了这样的结果:</p>
-<blockquote>
-<p>Cost 1640ms.</p>
-</blockquote>
-<p>共花费了1640毫秒,约2秒.</p>
-<h4 id="对scanf与printf进行测试"><a href="#对scanf与printf进行测试" class="headerlink" title="对scanf与printf进行测试"></a>对scanf与printf进行测试</h4><p>这次使用scanf和printf对测试数据进行读入并立刻输出至标准输出,同样用<code>ctime</code>中的<code>clock()</code>函数计时,并将运行时间写入文件.代码如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	FILE* fin=fopen(<span class="string">"data.in"</span>,<span class="string">"r"</span>);</span><br><span class="line">	FILE* fout=fopen(<span class="string">"test3.out"</span>,<span class="string">"w"</span>);</span><br><span class="line">	<span class="keyword">double</span> time0=clock();</span><br><span class="line">	<span class="keyword">int</span> tmp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fscanf</span>(fin,<span class="string">"%d"</span>,&amp;tmp);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,tmp);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">fprintf</span>(fout,<span class="string">"Cost %dms.\n"</span>,(<span class="keyword">int</span>)((clock()-time0)/CLOCKS_PER_SEC*<span class="number">1000</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在测试后我得到了这样的结果:</p>
-<blockquote>
-<p>Cost 216750ms.</p>
-</blockquote>
-<p>共花费了216750毫秒,约217秒,近4分钟.</p>
-<p>事情的进展开始超出了我的想象.</p>
-<h4 id="对读写挂的测试"><a href="#对读写挂的测试" class="headerlink" title="对读写挂的测试"></a>对读写挂的测试</h4><p>最后我对自己写的读写挂进行了读写测试.读写挂使用<code>getchar(void)</code>和<code>putchar(int _Ch)</code>函数进行读写,这两个函数的工作速度更快,但是一次只能对一个字符进行读或写.同样从文件中读入,立刻输出至标准输出,但这次的运行时间被输出至了标准输出.虽然不甚科学,但不会对数据产生太大的影响.</p>
-<p>代码如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get_int</span><span class="params">(<span class="keyword">int</span>&amp; a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> c=getchar();</span><br><span class="line">    <span class="keyword">bool</span> flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="string">'-'</span> &amp;&amp; (c&lt;<span class="string">'0'</span> || c&gt;<span class="string">'9'</span>)) c=getchar();</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">'-'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        flag=<span class="number">1</span>;</span><br><span class="line">        c=getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    a=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> &amp;&amp; c&lt;=<span class="string">'9'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        a*=<span class="number">10</span>;</span><br><span class="line">        a+=c-<span class="string">'0'</span>;</span><br><span class="line">        c=getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    a=flag?-a:a;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">put_int</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a&lt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">'-'</span>);</span><br><span class="line">        a=-a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(a&gt;<span class="number">9</span>) put_int(a/<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'0'</span>+a%<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">end_line</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;<span class="built_in">putchar</span>(<span class="string">'\n'</span>);&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">put_char</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;a[i]!=<span class="string">'\0'</span>;i++) <span class="built_in">putchar</span>(a[i]);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"data.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	<span class="keyword">int</span> tmp;</span><br><span class="line">	<span class="keyword">double</span> time0=clock();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000000</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		get_int(tmp);</span><br><span class="line">		put_int(tmp);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	put_char(<span class="string">"Cost "</span>);</span><br><span class="line">	put_int((<span class="keyword">int</span>)((clock()-time0)/CLOCKS_PER_SEC*<span class="number">1000</span>));</span><br><span class="line">	put_char(<span class="string">"ms.\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>测试结果是这样的:</p>
-<blockquote>
-<p>Cost 142303ms.</p>
-</blockquote>
-<p>共花费了142303毫秒,约142秒,超过2分钟.</p>
-<h2 id="对比-amp-总结"><a href="#对比-amp-总结" class="headerlink" title="对比&amp;总结"></a>对比&amp;总结</h2><p>最终得到的时间数据告诉我们,实际上的速度是这样的:</p>
-<blockquote>
-<p>v(scanf,printf)&lt;v(读写挂)&lt;v(cin,cout)&lt;v(cin,cout(关闭流同步))</p>
-</blockquote>
-<p>不禁开始怀疑人生.现在还没有找到问题所在,或许是我的读写挂太丑了?我查找了其他人写的读写挂,大部分和我的大同小异,应该没有太大影响.</p>
-<p>等找到问题所在再来更新这篇文章吧.如果您有什么高见,请务必留下评论,感谢!本蒟蒻在此鞠躬.</p>
-
+        <p>网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解.</p>
+<p>因此,掌握一种快速求解最大流问题的算法就异常重要了.大名鼎鼎的 <code>Ford-Fulkerson算法</code> 的效率过低, <code>EdmondsKarp算法</code> 虽有改进但是依然不够,直到 <code>Dicnic算法</code> 运用类似启发式搜索的思想将时间复杂度降低到$O(V^2E)$,才刚刚称得上是比较高效.而在此基础上,采用类似思路的 <code>ISAP算法</code> 则使用了动态的层次图,省略了Dicnic算法中BFS的过程,效率进一步提高(虽然理论的时间复杂度没有改变,仍然是$O(V^2E)$).</p>
+<p>虽然初次用ISAP水过了洛谷的 <a href="https://www.luogu.org/problemnew/show/P3376" target="_blank" rel="noopener">最大流模板题</a> ,但是依然担心自己还是没有掌握,于是在这里总结一下.</p>
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><p>ISAP的代码很简单,在Dicnic的基础上也比较容易理解.因此再研究ISAP之前要先研究这些:</p>
+<ul>
+<li>网络流的基本概念</li>
+<li>Dicnic算法</li>
+<li>链式前向星(邻接链表)</li>
+</ul>
+<h2 id="ISAP的基本思想"><a href="#ISAP的基本思想" class="headerlink" title="ISAP的基本思想"></a>ISAP的基本思想</h2><p>ISAP的思路的Dicnic是几乎一样的,生成(计算)每个节点的高度,层次(定义为当前节点到汇点的最短距离),搜索中每次前进只会走到高度比当前节点低1的节点,因此能保证总是向着汇点前进的,避免了向着反方向或是同层访问一些多余的节点,是典型的启发式搜索.</p>
+<p>那么就会遇到一个问题:如果在某个节点,我们发现无路可走了,怎么办?如果是这个点不可能再向它连接的其他节点发送流量了,那么似乎还没有什么问题;如果无路可走是因为高度的限制,会不会损失一部分解?</p>
+<p>这就是ISAP的核心:<strong>重贴标签</strong>.当我们发现出现了这种情况,我们重新标记当前节点的高度.为了不漏掉某些解,显然我们应该将它的高度设为<strong>比它连接的且边上还有富裕容量的节点中高度最小的节点大1</strong>.这就是所谓的 <code>重贴标签</code>.</p>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2>
       
     </div>
     
@@ -442,7 +408,7 @@
 	
 	<div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/03/25/读写挂测试与怀疑人生/">读写挂测试与怀疑人生</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年03月25日 - 16:03</p> <p><span>最后更新:</span>2018年03月29日 - 22:03</p> <p><span>原始链接:</span><a href="/2018/03/25/读写挂测试与怀疑人生/" title="读写挂测试与怀疑人生">https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/Snake52996/2018/03/25/读写挂测试与怀疑人生/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/03/30/最大流算法之ISAP/">最大流算法之ISAP</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年03月30日 - 21:03</p> <p><span>最后更新:</span>2018年03月30日 - 22:03</p> <p><span>原始链接:</span><a href="/2018/03/30/最大流算法之ISAP/" title="最大流算法之ISAP">https://snake52996.github.io/2018/03/30/最大流算法之ISAP/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
       
 	</div>
 
@@ -485,13 +451,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/胡言乱语/" rel="tag"><i class="fa fa-tag"></i> 胡言乱语</a>
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
           
-            <a href="/tags/实验/" rel="tag"><i class="fa fa-tag"></i> 实验</a>
+            <a href="/tags/图/" rel="tag"><i class="fa fa-tag"></i> 图</a>
           
-            <a href="/tags/奇技淫巧/" rel="tag"><i class="fa fa-tag"></i> 奇技淫巧</a>
+            <a href="/tags/网络流/" rel="tag"><i class="fa fa-tag"></i> 网络流</a>
           
-            <a href="/tags/读写优化/" rel="tag"><i class="fa fa-tag"></i> 读写优化</a>
+            <a href="/tags/最大流/" rel="tag"><i class="fa fa-tag"></i> 最大流</a>
           
         </div>
       
@@ -504,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/25/树链剖分学习笔记/" rel="next" title="树链剖分学习笔记">
-                <i class="fa fa-chevron-left"></i> 树链剖分学习笔记
+              <a href="/2018/03/25/读写挂测试&怀疑人生/" rel="next" title="读写挂测试&怀疑人生">
+                <i class="fa fa-chevron-left"></i> 读写挂测试&怀疑人生
               </a>
             
           </div>
@@ -609,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -690,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#经验告诉我们…"><span class="nav-number">1.</span> <span class="nav-text">经验告诉我们…</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成数据"><span class="nav-number">1.0.1.</span> <span class="nav-text">生成数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对cin与cout进行测试"><span class="nav-number">1.0.2.</span> <span class="nav-text">对cin与cout进行测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对关闭流同步的cin与cout进行测试"><span class="nav-number">1.0.3.</span> <span class="nav-text">对关闭流同步的cin与cout进行测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对scanf与printf进行测试"><span class="nav-number">1.0.4.</span> <span class="nav-text">对scanf与printf进行测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对读写挂的测试"><span class="nav-number">1.0.5.</span> <span class="nav-text">对读写挂的测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对比-amp-总结"><span class="nav-number">2.</span> <span class="nav-text">对比&amp;总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前置知识"><span class="nav-number">1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ISAP的基本思想"><span class="nav-number">2.</span> <span class="nav-text">ISAP的基本思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现"><span class="nav-number">3.</span> <span class="nav-text">具体实现</span></a></li></ol></div>
             
 
           </div>
@@ -724,7 +690,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计23.7k字</span>
+  <span class="post-count">博客共计24.4k字</span>
 </div>
         
 <div class="busuanzi-count">

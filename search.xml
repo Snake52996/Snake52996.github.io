@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[读写挂测试与怀疑人生]]></title>
-    <url>%2F2018%2F03%2F25%2F%E8%AF%BB%E5%86%99%E6%8C%82%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%80%E7%96%91%E4%BA%BA%E7%94%9F%2F</url>
+    <title><![CDATA[最大流算法之ISAP]]></title>
+    <url>%2F2018%2F03%2F30%2F%E6%9C%80%E5%A4%A7%E6%B5%81%E7%AE%97%E6%B3%95%E4%B9%8BISAP%2F</url>
+    <content type="text"><![CDATA[网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解. 因此,掌握一种快速求解最大流问题的算法就异常重要了.大名鼎鼎的 Ford-Fulkerson算法 的效率过低, EdmondsKarp算法 虽有改进但是依然不够,直到 Dicnic算法 运用类似启发式搜索的思想将时间复杂度降低到$O(V^2E)$,才刚刚称得上是比较高效.而在此基础上,采用类似思路的 ISAP算法 则使用了动态的层次图,省略了Dicnic算法中BFS的过程,效率进一步提高(虽然理论的时间复杂度没有改变,仍然是$O(V^2E)$). 虽然初次用ISAP水过了洛谷的 最大流模板题 ,但是依然担心自己还是没有掌握,于是在这里总结一下. 前置知识ISAP的代码很简单,在Dicnic的基础上也比较容易理解.因此再研究ISAP之前要先研究这些: 网络流的基本概念 Dicnic算法 链式前向星(邻接链表) ISAP的基本思想ISAP的思路的Dicnic是几乎一样的,生成(计算)每个节点的高度,层次(定义为当前节点到汇点的最短距离),搜索中每次前进只会走到高度比当前节点低1的节点,因此能保证总是向着汇点前进的,避免了向着反方向或是同层访问一些多余的节点,是典型的启发式搜索. 那么就会遇到一个问题:如果在某个节点,我们发现无路可走了,怎么办?如果是这个点不可能再向它连接的其他节点发送流量了,那么似乎还没有什么问题;如果无路可走是因为高度的限制,会不会损失一部分解? 这就是ISAP的核心:重贴标签.当我们发现出现了这种情况,我们重新标记当前节点的高度.为了不漏掉某些解,显然我们应该将它的高度设为比它连接的且边上还有富裕容量的节点中高度最小的节点大1.这就是所谓的 重贴标签. 具体实现]]></content>
+      <tags>
+        <tag>算法</tag>
+        <tag>图</tag>
+        <tag>网络流</tag>
+        <tag>最大流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[读写挂测试&怀疑人生]]></title>
+    <url>%2F2018%2F03%2F25%2F%E8%AF%BB%E5%86%99%E6%8C%82%E6%B5%8B%E8%AF%95%26%E6%80%80%E7%96%91%E4%BA%BA%E7%94%9F%2F</url>
     <content type="text"><![CDATA[众所周知,在信息题目中,有一个非常令人头疼的问题就是TLE.同样众所周知的还有一个词语,叫做卡常数.就像这样: “这道题时间复杂度没问题,怎么调都TLE” “卡卡常就过了/优化优化常数就过了” 然而,有时会被针对,即使主要过程中的复杂度和常数都很优,读入的过程就已经足以使得你的程序TLE.这时候就需要读写优化了. 经验告诉我们…一般来说,c++中的各种方式进行读写的速度对比是这样的:v(cin,cout)&lt;v(cin,cout(关闭流同步))&lt;v(scanf,printf)&lt;v(读写挂).针对这一点,我进行了一些测试(然后开始怀疑人生) 生成数据我采用了一个极为简单的程序随机生成$10^6$个整数存入文件,作为测试用的数据.程序代码如下: 1234567891011#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;ctime&gt;using namespace std;int main()&#123; srand(time(0)); freopen("data.in","w",stdout); for(int i=1;i&lt;=1000000;i++) printf("%d ",rand()); return 0;&#125; 对cin与cout进行测试首先我使用cin和cout对测试数据进行读入并立刻输出至标准输出,用ctime中的clock()函数计时,并将运行时间写入文件.代码如下: 123456789101112131415161718#include&lt;fstream&gt;#include&lt;iostream&gt;#include&lt;ctime&gt;using namespace std;ifstream fin("data.in");ofstream fout("test1.out");int main()&#123; double time0=clock(); int tmp; for(int i=1;i&lt;=1000000;i++) &#123; fin&gt;&gt;tmp; cout&lt;&lt;tmp&lt;&lt;" "; &#125; fout&lt;&lt;"Cost "&lt;&lt;(int)((clock()-time0)/CLOCKS_PER_SEC*1000)&lt;&lt;"ms."&lt;&lt;endl; return 0;&#125; 在测试后我得到了这样的结果: Cost 129151ms. 共花费了129151毫秒,约129秒,2分钟. 对关闭流同步的cin与cout进行测试我同样使用cin和cout对测试数据进行读入并立刻输出至标准输出,用ctime中的clock()函数计时,并将运行时间写入文件,但这次在开始之前我先关闭了cin,cout与stdio的同步,因为这个同步操作将带来不小的时间开销.代码如下: 12345678910111213141516171819#include&lt;fstream&gt;#include&lt;iostream&gt;#include&lt;ctime&gt;using namespace std;ifstream fin("data.in");ofstream fout("test2.out");int main()&#123; ios::sync_with_stdio(false); //关闭流同步 double time0=clock(); int tmp; for(int i=1;i&lt;=1000000;i++) &#123; fin&gt;&gt;tmp; cout&lt;&lt;tmp&lt;&lt;" "; &#125; fout&lt;&lt;"Cost "&lt;&lt;(int)((clock()-time0)/CLOCKS_PER_SEC*1000)&lt;&lt;"ms."&lt;&lt;endl; return 0;&#125; 在测试后我得到了这样的结果: Cost 1640ms. 共花费了1640毫秒,约2秒. 对scanf与printf进行测试这次使用scanf和printf对测试数据进行读入并立刻输出至标准输出,同样用ctime中的clock()函数计时,并将运行时间写入文件.代码如下: 1234567891011121314151617#include&lt;cstdio&gt;#include&lt;ctime&gt;int main()&#123; FILE* fin=fopen("data.in","r"); FILE* fout=fopen("test3.out","w"); double time0=clock(); int tmp; for(int i=1;i&lt;=1000000;i++) &#123; fscanf(fin,"%d",&amp;tmp); printf("%d ",tmp); &#125; fprintf(fout,"Cost %dms.\n",(int)((clock()-time0)/CLOCKS_PER_SEC*1000)); return 0;&#125; 在测试后我得到了这样的结果: Cost 216750ms. 共花费了216750毫秒,约217秒,近4分钟. 事情的进展开始超出了我的想象. 对读写挂的测试最后我对自己写的读写挂进行了读写测试.读写挂使用getchar(void)和putchar(int _Ch)函数进行读写,这两个函数的工作速度更快,但是一次只能对一个字符进行读或写.同样从文件中读入,立刻输出至标准输出,但这次的运行时间被输出至了标准输出.虽然不甚科学,但不会对数据产生太大的影响. 代码如下: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include&lt;cstdio&gt;#include&lt;ctime&gt;inline void get_int(int&amp; a)&#123; char c=getchar(); bool flag=0; while(c!='-' &amp;&amp; (c&lt;'0' || c&gt;'9')) c=getchar(); if(c=='-') &#123; flag=1; c=getchar(); &#125; a=0; while(c&gt;='0' &amp;&amp; c&lt;='9') &#123; a*=10; a+=c-'0'; c=getchar(); &#125; a=flag?-a:a; return;&#125;void put_int(int a)&#123; if(a&lt;0) &#123; putchar('-'); a=-a; &#125; if(a&gt;9) put_int(a/10); putchar('0'+a%10); return;&#125;inline void end_line(void)&#123;putchar('\n');&#125;inline void put_char(const char a[])&#123; for(int i=0;a[i]!='\0';i++) putchar(a[i]); return;&#125;int main()&#123; freopen("data.in","r",stdin); int tmp; double time0=clock(); for(int i=1;i&lt;=1000000;i++) &#123; get_int(tmp); put_int(tmp); putchar(' '); &#125; put_char("Cost "); put_int((int)((clock()-time0)/CLOCKS_PER_SEC*1000)); put_char("ms.\n"); return 0;&#125; 测试结果是这样的: Cost 142303ms. 共花费了142303毫秒,约142秒,超过2分钟. 对比&amp;总结最终得到的时间数据告诉我们,实际上的速度是这样的: v(scanf,printf)&lt;v(读写挂)&lt;v(cin,cout)&lt;v(cin,cout(关闭流同步)) 不禁开始怀疑人生.现在还没有找到问题所在,或许是我的读写挂太丑了?我查找了其他人写的读写挂,大部分和我的大同小异,应该没有太大影响. 等找到问题所在再来更新这篇文章吧.如果您有什么高见,请务必留下评论,感谢!本蒟蒻在此鞠躬.]]></content>
       <tags>
         <tag>胡言乱语</tag>
@@ -55,16 +66,7 @@
   <entry>
     <title><![CDATA[关于这个蜜汁博客]]></title>
     <url>%2F2018%2F03%2F25%2F%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E8%9C%9C%E6%B1%81%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧. 这个博客是闲来无事自己(照着网上的教程)轻松(花了几个小时)搭建完成的.将会取代我以前使用的CSDN博客成为我新的(也是唯一的)博客.我博文的新家哦. 博客的主要内容会是我这个蒟蒻的算法和数据结构的学习笔记以及自以为是的写的题解,偶尔会出现因为所见所闻而有感而发写下的随笔(懒,几乎不会出现). 题目主要会来自于一下几个OJ(偶尔也会在一些其他的奇怪的地方水一水题): 洛谷 河南省实验中学的OJ LiberOJ 以下是我在这些OJ上的个人主页(用以印证我是个蒟蒻): luogu/hoetateyo COGS/snake COGS/subarashii(小号) LiberOJ/snake 这个博客刚刚搭建好最最基本的框架,我也是刚刚开始尝试自行搭建博客,因此一定会有很多的Bug,请路过的大佬谅解.当然,如果能在评论中告诉我就更好了,万分感谢! 在本博客中,任何文章除非单独说明,否则均为原创文章.如果觉得写的还说得过去,希望转载的话,我十分高兴,请随意,但请务必在您的文中注明其来源(来源:https://snake52996.github.io/),谢谢. 就是这样.]]></content>
-      <tags>
-        <tag>测试</tag>
-        <tag>helloworld</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World and New Plan]]></title>
-    <url>%2F2018%2F03%2F24%2Fhello%20world%20and%20new%20plan%2F</url>
-    <content type="text"><![CDATA[现在,我在此宣布,我,Snake的自己搭建的(真好意思说)博客正式完工了!(才没有) 只是完成了基本的框架,姑且完成了一个能够展示的博客吧,虽然还很丑. 接下来还要干的事 把之前在CSDN博客上的文章搬过来 继续美化这个博客 添加一些骚操作(然而水平有限) 进行一系列测试尽快掌握 已经完成的事 添加评论功能(喂都不会有人看还添加评论功能呢) 总之,这里就是我以后博文的新的家了.Hello World!]]></content>
+    <content type="text"><![CDATA[这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧. 这个博客是闲来无事自己(照着网上的教程)轻松(花了几个小时)搭建完成的.将会取代我以前使用的CSDN博客成为我新的(也是唯一的)博客.我博文的新家哦. 博客的主要内容会是我这个蒟蒻的算法和数据结构的学习笔记以及自以为是的写的题解,偶尔会出现因为所见所闻而有感而发写下的随笔(懒,几乎不会出现). 题目主要会来自于一下几个OJ(偶尔也会在一些其他的奇怪的地方水一水题): 洛谷 河南省实验中学的OJ LiberOJ 以下是我在这些OJ上的个人主页(用以印证我是个蒟蒻): luogu/hoetateyo COGS/snake COGS/subarashii(小号) LiberOJ/snake 这个博客刚刚搭建好最最基本的框架,我也是刚刚开始尝试自行搭建博客,因此一定会有很多的Bug,请路过的大佬谅解.当然,如果能在评论中告诉我就更好了,万分感谢! 在本博客中,任何文章除非单独说明,否则均为原创文章.如果觉得写的还说得过去,希望转载的话,我十分高兴,请随意,但请务必在您的文中注明其来源(来源:https://snake52996.github.io/) ,谢谢. 接下来还要干的事 继续美化这个博客 添加一些骚操作(然而水平有限) 进行一系列测试尽快掌握 已经完成的事 添加评论功能(喂都不会有人看还添加评论功能呢) 把之前在 CSDN博客 上的文章搬过来 啊,对了,请不要问我密码有什么用,我知道它没有用,完全起不到阻止查看的作用,我只是希望实现这么一个功能,看着舒服. 就是这样.]]></content>
       <tags>
         <tag>测试</tag>
         <tag>helloworld</tag>
