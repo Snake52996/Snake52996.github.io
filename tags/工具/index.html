@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
-<script> (function(){ if('private'){ if (prompt('请输入文章密码') !== 'private'){ alert('密码错误！'); history.back(); } } })(); </script>
+<script> (function(){ if(''){ if (prompt('请输入文章密码') !== ''){ alert('密码错误！'); history.back(); } } })(); </script>
 
 
   
@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="算法,图,网络流,最大流,未完成," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,18 +87,16 @@
 
 
 
-<meta name="description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解.">
-<meta name="keywords" content="算法,图,网络流,最大流,未完成">
-<meta property="og:type" content="article">
-<meta property="og:title" content="最大流算法之ISAP">
-<meta property="og:url" content="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/index.html">
+<meta name="description" content="一个蒟蒻的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Snake的随波逐流">
+<meta property="og:url" content="https://snake52996.github.io/tags/工具/index.html">
 <meta property="og:site_name" content="Snake的随波逐流">
-<meta property="og:description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解.">
+<meta property="og:description" content="一个蒟蒻的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T12:38:08.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="最大流算法之ISAP">
-<meta name="twitter:description" content="网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解.">
+<meta name="twitter:title" content="Snake的随波逐流">
+<meta name="twitter:description" content="一个蒟蒻的博客">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/"/>
+  <link rel="canonical" href="https://snake52996.github.io/tags/工具/"/>
 
 
 
 
 
-  <title>最大流算法之ISAP | Snake的随波逐流</title>
+  <title>标签: 工具 | Snake的随波逐流</title>
   
 
 
@@ -153,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,196 +289,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>工具<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Snake">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Snake的随波逐流">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">最大流算法之ISAP</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/03/31/有用的工具/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">有用的工具</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T21:32:57+08:00">
-                2018-03-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/30/最大流算法之ISAP/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/30/最大流算法之ISAP/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>网络流(最大流)实在是个玄而又玄的东西.就是一个异常简单的模型,可以想象成是一个管道网络,各个管道有各自的单位时间最大通过的流量,问单位时间从其中某一个点(源点)到另一个点(汇点)能通过的最大流量.但是这个东西却能解决很多问题,其中的一些问题甚至看起来还和这个模型没啥关系,但是巧妙地构建关系建立出一张图之后就会发现,这玩意居然能用最大流的思想解.</p>
-<a id="more"></a>
-<p>因此,掌握一种快速求解最大流问题的算法就异常重要了.大名鼎鼎的 <code>Ford-Fulkerson算法</code> 的效率过低, <code>EdmondsKarp算法</code> 虽有改进但是依然不够,直到 <code>Dicnic算法</code> 运用类似启发式搜索的思想将时间复杂度降低到$O(V^2E)$,才刚刚称得上是比较高效.而在此基础上,采用类似思路的 <code>ISAP算法</code> 则使用了动态的层次图,省略了Dicnic算法中BFS的过程,效率进一步提高(虽然理论的时间复杂度没有改变,仍然是$O(V^2E)$).</p>
-<p>虽然初次用ISAP水过了洛谷的 <a href="https://www.luogu.org/problemnew/show/P3376" target="_blank" rel="noopener">最大流模板题</a> ,但是依然担心自己还是没有掌握,于是在这里总结一下.</p>
-<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><p>ISAP的代码很简单,在Dicnic的基础上也比较容易理解.因此再研究ISAP之前要先研究这些:</p>
-<ul>
-<li>网络流的基本概念</li>
-<li>Dicnic算法</li>
-<li>链式前向星(邻接链表)</li>
-</ul>
-<h2 id="ISAP的基本思想"><a href="#ISAP的基本思想" class="headerlink" title="ISAP的基本思想"></a>ISAP的基本思想</h2><p>ISAP的思路的Dicnic是几乎一样的,生成(计算)每个节点的高度,层次(定义为当前节点到汇点的最短距离),搜索中每次前进只会走到高度比当前节点低1的节点,因此能保证总是向着汇点前进的,避免了向着反方向或是同层访问一些多余的节点,是典型的启发式搜索.</p>
-<p>那么就会遇到一个问题:如果在某个节点,我们发现无路可走了,怎么办?如果是这个点不可能再向它连接的其他节点发送流量了,那么似乎还没有什么问题;如果无路可走是因为高度的限制,会不会损失一部分解?</p>
-<p>这就是ISAP的核心:<strong>重贴标签</strong>.当我们发现出现了这种情况,我们重新标记当前节点的高度.为了不漏掉某些解,显然我们应该将它的高度设为<strong>比它连接的且边上还有富裕容量的节点中高度最小的节点大1</strong>.这就是所谓的 <code>重贴标签</code>.</p>
-<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2>
-      
-    </div>
-    
-    
-    
-	
-	<div>
-      
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/03/30/最大流算法之ISAP/">最大流算法之ISAP</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年03月30日 - 21:03</p> <p><span>最后更新:</span>2018年03月31日 - 20:03</p> <p><span>原始链接:</span><a href="/2018/03/30/最大流算法之ISAP/" title="最大流算法之ISAP">https://snake52996.github.io/2018/03/30/最大流算法之ISAP/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/2018/03/30/最大流算法之ISAP/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
-      
-	</div>
-
-    
-
-    
-      <div>
+            </a>
         
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-31T16:43:17+08:00"
+              content="2018-03-31" >
+          03-31
+        </time>
       </div>
-    
 
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-            <a href="/tags/图/" rel="tag"><i class="fa fa-tag"></i> 图</a>
-          
-            <a href="/tags/网络流/" rel="tag"><i class="fa fa-tag"></i> 网络流</a>
-          
-            <a href="/tags/最大流/" rel="tag"><i class="fa fa-tag"></i> 最大流</a>
-          
-            <a href="/tags/未完成/" rel="tag"><i class="fa fa-tag"></i> 未完成</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/25/读写挂测试&怀疑人生/" rel="next" title="读写挂测试&怀疑人生">
-                <i class="fa fa-chevron-left"></i> 读写挂测试&怀疑人生
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/31/有用的工具/" rel="prev" title="有用的工具">
-                有用的工具 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -488,13 +344,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-  
-  
 
         </div>
         
@@ -515,17 +364,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概况
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -628,22 +468,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前置知识"><span class="nav-number">1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ISAP的基本思想"><span class="nav-number">2.</span> <span class="nav-text">ISAP的基本思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现"><span class="nav-number">3.</span> <span class="nav-text">具体实现</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -797,10 +621,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
