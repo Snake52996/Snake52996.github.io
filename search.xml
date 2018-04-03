@@ -5,9 +5,9 @@
     <url>%2F2018%2F04%2F03%2F%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91%2F</url>
     <content type="text"><![CDATA[刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm…]]></content>
       <tags>
+        <tag>数据结构</tag>
         <tag>题解</tag>
         <tag>未完成</tag>
-        <tag>数据结构</tag>
         <tag>可持久化</tag>
         <tag>线段树</tag>
       </tags>
