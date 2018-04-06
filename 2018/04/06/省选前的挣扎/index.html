@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Snake的随波逐流">
 <meta property="og:description" content="省选马上就要到了.距离退役只剩下不到一周了.大概(肯定)是要凉了.我知道.但是即使如此我也要在结束前挣扎,挣扎到结束.很愚蠢,是的.来记录一下这些天我都做了些什么题,学了些什么东西吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-06T10:16:20.868Z">
+<meta property="og:updated_time" content="2018-04-06T13:23:20.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="省选前的挣扎">
 <meta name="twitter:description" content="省选马上就要到了.距离退役只剩下不到一周了.大概(肯定)是要凉了.我知道.但是即使如此我也要在结束前挣扎,挣扎到结束.很愚蠢,是的.来记录一下这些天我都做了些什么题,学了些什么东西吧.">
@@ -391,10 +391,11 @@
 <a id="more"></a>
 <h2 id="学习的知识"><a href="#学习的知识" class="headerlink" title="学习的知识"></a>学习的知识</h2><ul>
 <li>可持久化线段树</li>
-<li>Trie(字典树)</li>
-<li>可持久化字典树</li>
+<li>Trie</li>
+<li>可持久化Trie</li>
 <li>后缀数组</li>
 <li>卢卡斯定理</li>
+<li>点分治<del>(淀粉质)</del></li>
 </ul>
 <h2 id="做题列表"><a href="#做题列表" class="headerlink" title="做题列表"></a>做题列表</h2><ul>
 <li>2018/4/3<ul>
@@ -427,6 +428,8 @@
 <li><a href="https://www.luogu.org/problemnew/show/T26551" target="_blank" rel="noopener"><strong>T26551</strong> lyf and Archerの作业</a> 模拟,坑题(没问题)</li>
 <li><a href="https://www.luogu.org/problemnew/show/T26544" target="_blank" rel="noopener"><strong>T26544</strong> 有趣の数列之233</a> 模拟,猜测题意(没问题)</li>
 <li><a href="https://www.luogu.org/problemnew/show/T26553" target="_blank" rel="noopener"><strong>T26553</strong> Saberの骑士之战</a> 链表,模拟(现在应该没问题)</li>
+<li><a href="http://acm.nankai.edu.cn/new/p2338.html" target="_blank" rel="noopener">A + B Problem</a> 线性筛质数,模拟,坑题(应该没问题)</li>
+<li><a href="http://acm.nankai.edu.cn/new/p2347.html" target="_blank" rel="noopener">野兽先辈万物说</a> 字符串处理,哈希,并查集(应该没问题)</li>
 </ul>
 </li>
 </ul>
@@ -439,7 +442,7 @@
 	
 	<div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/06/省选前的挣扎/">省选前的挣扎</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月06日 - 16:04</p> <p><span>最后更新:</span>2018年04月06日 - 18:04</p> <p><span>原始链接:</span><a href="/2018/04/06/省选前的挣扎/" title="省选前的挣扎">https://snake52996.github.io/2018/04/06/省选前的挣扎/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/2018/04/06/省选前的挣扎/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/06/省选前的挣扎/">省选前的挣扎</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月06日 - 16:04</p> <p><span>最后更新:</span>2018年04月06日 - 21:04</p> <p><span>原始链接:</span><a href="/2018/04/06/省选前的挣扎/" title="省选前的挣扎">https://snake52996.github.io/2018/04/06/省选前的挣扎/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake52996.github.io/2018/04/06/省选前的挣扎/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
       
 	</div>
 
@@ -481,6 +484,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/06/题解-P1036-选数/" rel="prev" title="题解 P1036-选数">
+                题解 P1036-选数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,7 +571,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -577,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -692,7 +699,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计26.2k字</span>
+  <span class="post-count">博客共计28.9k字</span>
 </div>
         
 <div class="busuanzi-count">
