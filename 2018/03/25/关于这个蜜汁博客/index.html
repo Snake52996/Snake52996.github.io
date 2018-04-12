@@ -91,11 +91,11 @@
 <meta name="keywords" content="测试,helloworld,备忘录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于这个蜜汁博客">
-<meta property="og:url" content="https://snake52996.github.io/2018/03/25/关于这个蜜汁博客/index.html">
+<meta property="og:url" content="https://snake.moe/2018/03/25/关于这个蜜汁博客/index.html">
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-11T14:16:22.516Z">
+<meta property="og:updated_time" content="2018-04-12T14:17:00.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于这个蜜汁博客">
 <meta name="twitter:description" content="这篇文章主要是为了测试发布新博文以及简单描述一下这个博客. 当这篇博文被看到的时候想必就完成了第一个任务了吧.">
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://snake52996.github.io/2018/03/25/关于这个蜜汁博客/"/>
+  <link rel="canonical" href="https://snake.moe/2018/03/25/关于这个蜜汁博客/"/>
 
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://snake52996.github.io/2018/03/25/关于这个蜜汁博客/">
+    <link itemprop="mainEntityOfPage" href="https://snake.moe/2018/03/25/关于这个蜜汁博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Snake">
@@ -419,6 +419,7 @@
 </ul>
 <p>这个博客刚刚搭建好最最基本的框架,我也是刚刚开始尝试自行搭建博客,因此一定会有很多的Bug,请路过的大佬谅解.当然,如果能在评论中告诉我就更好了,万分感谢!</p>
 <p>关于评论,在评论时前两项信息(昵称和邮箱)是必填的(当然内容也是).邮箱不会公开,但是会用于获取你的(如果有的话) <a href="http://cn.gravatar.com/" target="_blank" rel="noopener">Gravatar头像</a> 并加以展示.请善加利用.网址一栏并非必填,但是那个会决定点击你的头像会前往何处.如果你希望自己的站点被访问,可以考虑留下这个信息哦.</p>
+<p>另外,如果使用HTTP链接访问将无法发布评论.请使用HTTPS进行访问(话说好像开了”强制HTTPS访问”诶…).</p>
 <p>在本博客中,任何文章除非单独说明,否则均为原创文章.如果您觉得写的还说得过去,希望转载的话,那是您对我的肯定,我十分高兴,请随意,但请务必在您的文中注明其来源(如果是我的原创文章在文章下面也会有的,否则其来源会在开头写明),谢谢.您可以在左侧边栏上看到授权协议.</p>
 <p>如果您愿意和我这个蒟蒻交换友链,我真的是乐意之至。您可以从左侧进入友链页面,直接再下面评论就好了!</p>
 <p>接下来还要干的事</p>
@@ -426,7 +427,6 @@
 <li>继续美化这个博客</li>
 <li>添加一些骚操作<del>(然而水平有限)</del></li>
 <li>添加一个至少高效的展示PDF的东西(还没找到)</li>
-<li>换个域名(看上snake.moe了)</li>
 </ul>
 <p>已经完成的事</p>
 <ul>
@@ -434,6 +434,8 @@
 <li>把之前在 <a href="https://blog.csdn.net/snake52996" target="_blank" rel="noopener">CSDN博客</a>上的文章搬过来</li>
 <li>把之前在<a href="https://www.luogu.org/blog/snake52996" target="_blank" rel="noopener">洛谷博客</a>上的文章搬过来</li>
 <li>建立独立的友链页面</li>
+<li><strong>使用了域名<a href="https://snake.moe/">snake.moe</a>!</strong></li>
+<li>添加了点击特效(现在点击会飘字了).</li>
 </ul>
 <p>啊,对了,请不要问我密码有什么用,我知道它没有用,完全起不到阻止查看内容的作用,我只是希望实现这么一个功能,看着舒服.</p>
 <p>就是这样.</p>
@@ -654,20 +656,6 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/Capella" title="Capella" target="_blank">Capella</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
 
           
 
@@ -702,7 +690,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计30.4k字</span>
+  <span class="post-count">博客共计30.5k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -746,7 +734,53 @@
     
 
   </div>
-
+  <script type="text/javascript">
+/* 鼠标特效 */ 
+var a_idx = 0;
+var seed = 10007;
+/*
+function randomFrom(lowerValue,upperValue)
+{
+    return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
+}
+*/
+jQuery(document).ready(function($) { 
+    $("body").click(function(e) { 
+        var a = new Array("大佬","佩服","%%%","学不来","比不了","强强强","服气","膜拜","我太蒻了","不存在的","谢谢阅读","花Q"); 
+		a_idx = Math.floor(Math.random() * a.length);
+		var $i = $("<span/>").text(a[a_idx]);
+		/*a_idx = (a_idx+((seed*10073486515456548456)+6950848478488968498494894965498654896)%10567)%a.length;*/
+		/*alert(10);
+		alert(Math.random());
+		alert(Math.floor(Math.random() * 255));*/
+		/*seed = a_idx;*/
+        var x = e.pageX, 
+        y = e.pageY;
+		var red = Math.floor(Math.random() * 255);
+		var green = Math.floor(Math.random() * 255);
+		var blue = Math.floor(Math.random() * 255);
+		var colour = "rgb("+red.toString()+","+green.toString()+","+blue.toString()+")";
+        $i.css({ 
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+            "top": y - 20, 
+            "left": x, 
+            "position": "absolute", 
+            "font-weight": "bold", 
+            /*"color": "rgb(202,200,20)" */
+			"color": colour
+        }); 
+        $("body").append($i); 
+        $i.animate({ 
+            "top": y - 180, 
+            "opacity": 0 
+        }, 
+        1500, 
+        function() { 
+            $i.remove(); 
+        }); 
+    }); 
+}); 
+</script>
   
 
 <script type="text/javascript">
@@ -1255,5 +1289,7 @@
 
   
 
+  
+  
 </body>
 </html>

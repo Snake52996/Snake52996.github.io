@@ -90,7 +90,7 @@
 <meta name="description" content="从尽头眺望世界">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Snake的尽头之塔">
-<meta property="og:url" content="https://snake52996.github.io/tags/胡言乱语/index.html">
+<meta property="og:url" content="https://snake.moe/tags/胡言乱语/index.html">
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="从尽头眺望世界">
 <meta property="og:locale" content="zh-Hans">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://snake52996.github.io/tags/胡言乱语/"/>
+  <link rel="canonical" href="https://snake.moe/tags/胡言乱语/"/>
 
 
 
@@ -598,20 +598,6 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/Capella" title="Capella" target="_blank">Capella</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
 
           
 
@@ -646,7 +632,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计30.4k字</span>
+  <span class="post-count">博客共计30.5k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -690,7 +676,53 @@
     
 
   </div>
-
+  <script type="text/javascript">
+/* 鼠标特效 */ 
+var a_idx = 0;
+var seed = 10007;
+/*
+function randomFrom(lowerValue,upperValue)
+{
+    return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
+}
+*/
+jQuery(document).ready(function($) { 
+    $("body").click(function(e) { 
+        var a = new Array("大佬","佩服","%%%","学不来","比不了","强强强","服气","膜拜","我太蒻了","不存在的","谢谢阅读","花Q"); 
+		a_idx = Math.floor(Math.random() * a.length);
+		var $i = $("<span/>").text(a[a_idx]);
+		/*a_idx = (a_idx+((seed*10073486515456548456)+6950848478488968498494894965498654896)%10567)%a.length;*/
+		/*alert(10);
+		alert(Math.random());
+		alert(Math.floor(Math.random() * 255));*/
+		/*seed = a_idx;*/
+        var x = e.pageX, 
+        y = e.pageY;
+		var red = Math.floor(Math.random() * 255);
+		var green = Math.floor(Math.random() * 255);
+		var blue = Math.floor(Math.random() * 255);
+		var colour = "rgb("+red.toString()+","+green.toString()+","+blue.toString()+")";
+        $i.css({ 
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+            "top": y - 20, 
+            "left": x, 
+            "position": "absolute", 
+            "font-weight": "bold", 
+            /*"color": "rgb(202,200,20)" */
+			"color": colour
+        }); 
+        $("body").append($i); 
+        $i.animate({ 
+            "top": y - 180, 
+            "opacity": 0 
+        }, 
+        1500, 
+        function() { 
+            $i.remove(); 
+        }); 
+    }); 
+}); 
+</script>
   
 
 <script type="text/javascript">
@@ -1195,5 +1227,7 @@
 
   
 
+  
+  
 </body>
 </html>

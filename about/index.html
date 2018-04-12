@@ -90,7 +90,7 @@
 <meta name="description" content="我是来自北京的一个蒟蒻.信息竞赛的爱好者(从去年开始我才敢这么说,以前一直是心不在焉,甚至最开始只是想要借机玩游戏). 然而已经很晚了.即将成为非常可惜的学生了(残念生哦). umm我相信这还是能理解的吧…ざんねんせい/さんねんせい. 嗯,就是在这么个时候,我才重新开始并认真对待起信息竞赛(之前甚至去物理竞赛摸了一年的鱼,混了几个二等奖,几乎算是一无所获,想起来真是心情复杂). 尽管时间已经不多了">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于我">
-<meta property="og:url" content="https://snake52996.github.io/about/index.html">
+<meta property="og:url" content="https://snake.moe/about/index.html">
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="我是来自北京的一个蒟蒻.信息竞赛的爱好者(从去年开始我才敢这么说,以前一直是心不在焉,甚至最开始只是想要借机玩游戏). 然而已经很晚了.即将成为非常可惜的学生了(残念生哦). umm我相信这还是能理解的吧…ざんねんせい/さんねんせい. 嗯,就是在这么个时候,我才重新开始并认真对待起信息竞赛(之前甚至去物理竞赛摸了一年的鱼,混了几个二等奖,几乎算是一无所获,想起来真是心情复杂). 尽管时间已经不多了">
 <meta property="og:locale" content="zh-Hans">
@@ -127,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="https://snake52996.github.io/about/"/>
+  <link rel="canonical" href="https://snake.moe/about/"/>
 
 
 
@@ -455,20 +455,6 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/Capella" title="Capella" target="_blank">Capella</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
 
           
 
@@ -503,7 +489,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计30.4k字</span>
+  <span class="post-count">博客共计30.5k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -547,7 +533,53 @@
     
 
   </div>
-
+  <script type="text/javascript">
+/* 鼠标特效 */ 
+var a_idx = 0;
+var seed = 10007;
+/*
+function randomFrom(lowerValue,upperValue)
+{
+    return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
+}
+*/
+jQuery(document).ready(function($) { 
+    $("body").click(function(e) { 
+        var a = new Array("大佬","佩服","%%%","学不来","比不了","强强强","服气","膜拜","我太蒻了","不存在的","谢谢阅读","花Q"); 
+		a_idx = Math.floor(Math.random() * a.length);
+		var $i = $("<span/>").text(a[a_idx]);
+		/*a_idx = (a_idx+((seed*10073486515456548456)+6950848478488968498494894965498654896)%10567)%a.length;*/
+		/*alert(10);
+		alert(Math.random());
+		alert(Math.floor(Math.random() * 255));*/
+		/*seed = a_idx;*/
+        var x = e.pageX, 
+        y = e.pageY;
+		var red = Math.floor(Math.random() * 255);
+		var green = Math.floor(Math.random() * 255);
+		var blue = Math.floor(Math.random() * 255);
+		var colour = "rgb("+red.toString()+","+green.toString()+","+blue.toString()+")";
+        $i.css({ 
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+            "top": y - 20, 
+            "left": x, 
+            "position": "absolute", 
+            "font-weight": "bold", 
+            /*"color": "rgb(202,200,20)" */
+			"color": colour
+        }); 
+        $("body").append($i); 
+        $i.animate({ 
+            "top": y - 180, 
+            "opacity": 0 
+        }, 
+        1500, 
+        function() { 
+            $i.remove(); 
+        }); 
+    }); 
+}); 
+</script>
   
 
 <script type="text/javascript">
@@ -1056,5 +1088,7 @@
 
   
 
+  
+  
 </body>
 </html>
