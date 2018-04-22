@@ -12,7 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
-<script> (function(){ if(''){ if (prompt('请输入文章密码') !== ''){ alert('似乎有哪里不对呢！花Q!'); history.back(); } } })(); </script>
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码') !== ''){
+				alert('似乎有哪里不对呢！花Q!');
+				history.back();
+			}
+		}
+	})();
+</script>
 
 
   
@@ -76,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="题解,数据结构,未完成,可持久化,线段树," />
+  <meta name="keywords" content="未完成,数据结构,可持久化,线段树,学习笔记," />
 
 
 
@@ -88,16 +97,16 @@
 
 
 <meta name="description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
-<meta name="keywords" content="题解,数据结构,未完成,可持久化,线段树">
+<meta name="keywords" content="未完成,数据结构,可持久化,线段树,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="可持久化线段树">
+<meta property="og:title" content="线段树学习笔记">
 <meta property="og:url" content="https://snake.moe/2018/04/03/线段树学习笔记/index.html">
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-22T03:38:32.291Z">
+<meta property="og:updated_time" content="2018-04-22T07:59:56.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="可持久化线段树">
+<meta name="twitter:title" content="线段树学习笔记">
 <meta name="twitter:description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
 
 
@@ -134,7 +143,7 @@
 
 
 
-  <title>可持久化线段树 | Snake的尽头之塔</title>
+  <title>线段树学习笔记 | Snake的尽头之塔</title>
   
 
 
@@ -332,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">可持久化线段树</h1>
+          <h1 class="post-title" itemprop="name headline">线段树学习笔记</h1>
         
 
         <div class="post-meta">
@@ -400,6 +409,26 @@
         <p>刚刚学习了可持久化线段树,AC了<a href="https://www.luogu.org/problemnew/show/P3919" target="_blank" rel="noopener">洛谷上的模板题</a>,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了).</p>
 <p>umm仔细想了想,就从基础的线段树开始吧.</p>
 <a id="more"></a>
+<p>考虑一类问题.给你一个序列,让你进行以下的操作:</p>
+<ul>
+<li>将区间$[l,r]$中的所有值加上$v$</li>
+<li>查询区间$[l.r]$中的所有值的和</li>
+<li>查询区间$[l.r]$中的所有值的积</li>
+<li>查询区间$[l.r]$中的所有值的最大值</li>
+<li>查询区间$[l.r]$中的所有值的最小值</li>
+</ul>
+<p>甚至是像这样,还要你支持这样的操作:</p>
+<ul>
+<li>将区间$[l.r]$中的所有值乘上$v$</li>
+<li>查询区间$[l.r]$中的所有值的最大公约数</li>
+</ul>
+<p>等等.这些操作都有这样的共同点:</p>
+<ul>
+<li>对区间进行操作或是查询</li>
+<li>可以由任意两个区间的结果迅速(一般是$O(1)$)计算出这两个区间合并后得到的新区间的结果</li>
+</ul>
+<p>对于这样的问题,我们有一个非常强大的工具,就是线段树.线段树可以支持以上的所有操作,而且思路非常清晰,代码也很简洁(但是我太菜所以写不简洁也写不漂亮),其除初始化的所有操作的时间复杂度均为$O(log\;n)$(初始化的复杂度是$O(n)$).</p>
+<h2 id="线段树的实现思路"><a href="#线段树的实现思路" class="headerlink" title="线段树的实现思路"></a>线段树的实现思路</h2><p>显然,在线性结构上实现区间的高速操作是不太现实的(据我所知),因此我们采用树状结构,利用分治的思想,将整个序列一分为二,再把得到的两个序列分别一分为二,知道得到的子区间</p>
 <p>umm…等着填坑.</p>
 
       
@@ -410,7 +439,7 @@
 	
 	<div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/03/线段树学习笔记/">可持久化线段树</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月03日 - 22:04</p> <p><span>最后更新:</span>2018年04月22日 - 11:04</p> <p><span>原始链接:</span><a href="/2018/04/03/线段树学习笔记/" title="可持久化线段树">https://snake.moe/2018/04/03/线段树学习笔记/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake.moe/2018/04/03/线段树学习笔记/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/03/线段树学习笔记/">线段树学习笔记</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月03日 - 22:04</p> <p><span>最后更新:</span>2018年04月22日 - 15:04</p> <p><span>原始链接:</span><a href="/2018/04/03/线段树学习笔记/" title="线段树学习笔记">https://snake.moe/2018/04/03/线段树学习笔记/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake.moe/2018/04/03/线段树学习笔记/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
       
 	</div>
 
@@ -428,15 +457,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题解/" rel="tag"><i class="fa fa-tag"></i> 题解</a>
+            <a href="/tags/未完成/" rel="tag"><i class="fa fa-tag"></i> 未完成</a>
           
             <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-          
-            <a href="/tags/未完成/" rel="tag"><i class="fa fa-tag"></i> 未完成</a>
           
             <a href="/tags/可持久化/" rel="tag"><i class="fa fa-tag"></i> 可持久化</a>
           
             <a href="/tags/线段树/" rel="tag"><i class="fa fa-tag"></i> 线段树</a>
+          
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
           
         </div>
       
@@ -511,13 +540,22 @@
 
   <aside id="sidebar" class="sidebar">
     
-    <div class="sidebar-inner">
+    <div class="sidebar-inner" id="base1">
 
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概况
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -549,7 +587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -601,69 +639,92 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树的实现思路"><span class="nav-number">1.</span> <span class="nav-text">线段树的实现思路</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
+      
+	  </div>
 	  
-	  
-	  <br />
-	  <h4 class="ui top attached block header">一言（ヒトコト）</h4>
-	  <br />
-	  <div id="hito" style="font-size: 1em; line-height: 1.5em;"></div>
-	  <script src="/js/src/jquery-3.3.1.js"></script>
+	  <div class="sidebar-inner" style="opacity: 1; display: block; transform: initial;" id="target1">
+	  <!--position:relative; top:20px; left:-10px;-->
+	    <section class="hitokoto">
+          <div class="hitokoto_show">
+			<h4 class="ui top attached block header">一言（ヒトコト）</h4>
+			<br />
+			<div id="hito" style="font-size: 1em; line-height: 1.5em;"></div>
+			<script src="/js/src/jquery-3.3.1.js"></script>
+			<script type="text/javascript">
+				var a_idx = 0;
+				var a = new Array("宣纸泛黄，时间流逝，即使眨眼即过，也要抓住那瞬间的辉煌。",
+								"我们一路奋战，不是为了改变世界，而是为了不让世界改变我们。",
+								"(」・ω・)」うー！(／・ω・)／にゃー！",
+								"即使你忘记了我，我也不会遗忘你。",
+								"因为喜欢你，所以想继续相信下去。",
+								"正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。",
+								"也许正义并非太阳，而是如同星星一般的东西，天空中有无数的星星，彼此不断抵消着其他星星的光芒。",
+								"我不相信人类......但是，我相信人类的“可能性”",
+								"正是在对未来没有任何希望的时候，一个人能坚持到什么地步，才真正体现出这个人有多坚强。",
+								"我们虽然距离很远很远，非常非常的远，但是思念或许真的可以穿越时间和距离。",
+								"无法飞翔的翅膀也是有意义的，因为它是曾经翱翔于天空所留下的珍贵回忆。",
+								"虚伪的眼泪，会伤害别人，虚伪的笑容，会伤害自己。",
+								"伤害别人的人，就要有被伤害的觉悟！",
+								"有阳光的地方就会有阴影，所以有阴影的地方也一定会有阳光。绝望的颜色越是浓厚，在哪里也一定会存在耀眼的希望之光。",
+								"正因生来一无所有，因此我们能拥有一切。",
+								"败者死于绝望，胜者死于渴望。美丽的不是这个世界，而是接受了这个世界的你的眼睛。",
+								"明天的事，交给明天的我。",
+								"重要的不是你做了多少事，而是你放了多少心思进去。",
+								"梦想是否无聊并不是别人来决定的，不管是什么样的梦想，自己拼命努力去追寻才是最重要的。",	
+								"活在现实中的人是错的，而那些哭泣的人才是正确的，孤独的我们才有人类的样子。",
+								"只有用心才能看到本质，最重要的东西眼睛是无法看到的。",
+								"时间并不存在，存在的只有此刻。",
+								"所谓“大家”，就是无视并牺牲了一部分弱势群体后所达到的虚伪的和平与共识。",
+								"就算是自私……我也希望那些人能够永远都有笑容……",
+								"梦存高远，志在争霸，这股热情确实值得赞许。但所谓梦，终有一天是要醒来的。",
+								"我有在反省，但我不后悔。",
+								"什么都无法舍弃的人，什么都无法改变。",
+								"悲伤教会了我喜悦。",
+								"用你的笑容去改变这个世界，别让这个世界改变了你的笑容。",
+								"一个人走在路上，形单影只。回首望去，大家都留在远方。回过头来继续前行，这便是所谓坚强。",
+								"我只对现实世界绝望过，却未对自己绝望过！",
+								"若隐若现才是艺术！",
+								"俺はいつまでもお前だけを見てる。"
+								); 
+				/*TODO:添加标签,实现对一类需要特殊展示的进行特殊展示*/
+				/*TODO:换用更优美的存储方式*/
+				a_idx = Math.floor(Math.random() * a.length);
+				var temp_text=a[a_idx];
+				var set_style="font-size: ";
+				if(temp_text=="(」・ω・)」うー！(／・ω・)／にゃー！"){
+					set_style=set_style+"0.75em; line-height: 1.5em;";
+				}else{
+					set_style=set_style+"1em; line-height: 1.5em;";
+				}
+				$(document).ready(function(){
+				$(hito).text(temp_text);
+				$(hito).attr("style",set_style);
+				});
+			</script>
+           </div>
+          </section>
+	    </div>
 	  <script type="text/javascript">
-		var a_idx = 0;
-        var a = new Array("宣纸泛黄，时间流逝，即使眨眼即过，也要抓住那瞬间的辉煌。",
-						  "我们一路奋战，不是为了改变世界，而是为了不让世界改变我们。",
-						  "(」・ω・)」うー！(／・ω・)／にゃー！",
-						  "即使你忘记了我，我也不会遗忘你。",
-						  "因为喜欢你，所以想继续相信下去。",
-						  "正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。",
-						  "也许正义并非太阳，而是如同星星一般的东西，天空中有无数的星星，彼此不断抵消着其他星星的光芒。",
-						  "我不相信人类......但是，我相信人类的“可能性”",
-						  "正是在对未来没有任何希望的时候，一个人能坚持到什么地步，才真正体现出这个人有多坚强。",
-						  "我们虽然距离很远很远，非常非常的远，但是思念或许真的可以穿越时间和距离。",
-						  "无法飞翔的翅膀也是有意义的，因为它是曾经翱翔于天空所留下的珍贵回忆。",
-						  "虚伪的眼泪，会伤害别人，虚伪的笑容，会伤害自己。",
-						  "伤害别人的人，就要有被伤害的觉悟！",
-						  "有阳光的地方就会有阴影，所以有阴影的地方也一定会有阳光。绝望的颜色越是浓厚，在哪里也一定会存在耀眼的希望之光。",
-						  "正因生来一无所有，因此我们能拥有一切。",
-						  "败者死于绝望，胜者死于渴望。美丽的不是这个世界，而是接受了这个世界的你的眼睛。",
-						  "明天的事，交给明天的我。",
-						  "重要的不是你做了多少事，而是你放了多少心思进去。",
-						  "梦想是否无聊并不是别人来决定的，不管是什么样的梦想，自己拼命努力去追寻才是最重要的。",	
-						  "活在现实中的人是错的，而那些哭泣的人才是正确的，孤独的我们才有人类的样子。",
-						  "只有用心才能看到本质，最重要的东西眼睛是无法看到的。",
-						  "时间并不存在，存在的只有此刻。",
-						  "所谓“大家”，就是无视并牺牲了一部分弱势群体后所达到的虚伪的和平与共识。",
-						  "就算是自私……我也希望那些人能够永远都有笑容……",
-						  "梦存高远，志在争霸，这股热情确实值得赞许。但所谓梦，终有一天是要醒来的。",
-						  "我有在反省，但我不后悔。",
-						  "什么都无法舍弃的人，什么都无法改变。",
-						  "悲伤教会了我喜悦。",
-						  "用你的笑容去改变这个世界，别让这个世界改变了你的笑容。",
-						  "一个人走在路上，形单影只。回首望去，大家都留在远方。回过头来继续前行，这便是所谓坚强。",
-						  "我只对现实世界绝望过，却未对自己绝望过！",
-						  "若隐若现才是艺术！",
-						  "俺はいつまでもお前だけを見てる。"
-						  ); 
-		/*TODO:添加标签,实现对一类需要特殊展示的进行特殊展示*/
-		/*TODO:换用更优美的存储方式*/
-		a_idx = Math.floor(Math.random() * a.length);
-		var temp_text=a[a_idx];
-		var set_style="font-size: ";
-		if(temp_text=="(」・ω・)」うー！(／・ω・)／にゃー！"){
-			set_style=set_style+"0.75em; line-height: 1.5em;";
-		}else{
-			set_style=set_style+"1em; line-height: 1.5em;";
-		}
-		$(document).ready(function(){
-		$(hito).text(temp_text);
-		$(hito).attr("style",set_style);
-		});
+	  $(document).ready(function(){
+	      setInterval("$(target1).offset({top:$(base1).offset().top+$(base1).outerHeight(true)+10,left:$(base1).offset().left})",100);
+	  });
 	  </script>
-	  
-	  
-	  
 	  
     </div>
   </aside>
@@ -689,7 +750,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计38.5k字</span>
+  <span class="post-count">博客共计38.8k字</span>
 </div>
         
 <div class="busuanzi-count">
