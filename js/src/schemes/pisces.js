@@ -5,7 +5,7 @@ $(window).load(function () {
   var hitokoto = $('.sidebar-inner2');*/
   
   var sidebarInner = $("#base1");
-  var hitokoto = $("#target1");
+  //var hitokoto = $("#target1");
 
   initAffix();
   resizeListener();
@@ -14,7 +14,7 @@ $(window).load(function () {
     var headerOffset = getHeaderOffset(),
         footerOffset = getFooterOffset(),
         sidebarHeight = $('#sidebar').outerHeight(true) + NexT.utils.getSidebarb2tHeight(),
-		hitokotoHeight = $(hitokoto).outerHeight(true);
+		//hitokotoHeight = $(hitokoto).outerHeight(true);
         contentHeight = $('#content').outerHeight(true);
 		
 		/*
@@ -34,15 +34,16 @@ $(window).load(function () {
           bottom: footerOffset
         }
       });
+	  /*
 	  hitokoto.affix({
         offset: {
           top: headerOffset - CONFIG.sidebar.offset,
           bottom: footerOffset
         }
       });
+	  */
     }
-	$(hitokoto).offset({top: $(hitokoto).offset().top + $(sidebarInner).outerHeight(true) + 10});
-	
+	//$(hitokoto).offset({top: $(hitokoto).offset().top + $(sidebarInner).outerHeight(true) + 10});
 	/*if($(hitokoto).offset().top > $(sidebarInner).offset().top + $(sidebarInner).outerHeight(true) + 10) {
 		$(hitokoto).offset({top: $(sidebarInner).offset().top + $(sidebarInner).outerHeight(true) + 10});
 	}*/
@@ -87,8 +88,9 @@ $(window).load(function () {
   function recalculateAffixPosition () {
     $(window).off('.affix');
     sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
-    hitokoto.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+    //hitokoto.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
 	initAffix();
+	//$(hitokoto).offset({top: $(sidebarInner).offset().top + $(sidebarInner).outerHeight(true) + 10});
   }
 
 });

@@ -551,14 +551,11 @@
       <!--/noindex-->
       
       
-	  </div>
-	  
-	  <div class="sidebar-inner" style="opacity: 1; display: block; transform: initial; height: auto;" id="target1">
-	  <!--position:relative; top:20px; left:-10px;-->
+	  	  
+		<hr />
 	    <section class="hitokoto">
           <div class="hitokoto_show">
 			<h4 class="ui top attached block header">一言（ヒトコト）</h4>
-			<br />
 			<div id="hito" style="font-size: 1em; line-height: 1.5em;"></div>
 			<script src="/js/src/jquery-3.3.1.js"></script>
 			<script type="text/javascript">
@@ -607,6 +604,7 @@
 				}else{
 					set_style=set_style+"1em; line-height: 1.5em;";
 				}
+				var data_offset=$("#base1").offset().top + $("#base1").outerHeight(true);
 				$(document).ready(function(){
 				$(hito).text(temp_text);
 				$(hito).attr("style",set_style);
@@ -614,15 +612,8 @@
 			</script>
            </div>
           </section>
-	    </div>
-	  <script type="text/javascript">
-	  /*
-	  $(document).ready(function(){
-	      setInterval("$(target1).offset({top:$(base1).offset().top+$(base1).outerHeight(true)+10,left:$(base1).offset().left})",100);
-	  });
-	  */
-	  </script>
 	  
+	  </div>
     </div>
   </aside>
 
@@ -1247,7 +1238,6 @@ jQuery(document).ready(function($) {
 
   
 
-  
   
 </body>
 </html>
