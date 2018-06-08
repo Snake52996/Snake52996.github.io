@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="未完成,数据结构,可持久化,线段树,学习笔记," />
+  <meta name="keywords" content="数据结构,未完成,可持久化,线段树,学习笔记," />
 
 
 
@@ -97,14 +97,14 @@
 
 
 <meta name="description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
-<meta name="keywords" content="未完成,数据结构,可持久化,线段树,学习笔记">
+<meta name="keywords" content="数据结构,未完成,可持久化,线段树,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线段树学习笔记">
 <meta property="og:url" content="https://snake.moe/2018/04/03/线段树学习笔记/index.html">
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-28T12:42:12.998Z">
+<meta property="og:updated_time" content="2018-06-07T06:44:54.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树学习笔记">
 <meta name="twitter:description" content="刚刚学习了可持久化线段树,AC了洛谷上的模板题,来总结一波这个看似复杂的数据结构吧(其实一点也不难的,我这么弱都一遍写对了). umm仔细想了想,就从基础的线段树开始吧.">
@@ -474,7 +474,7 @@
 <li>可以由任意两个区间的结果迅速(一般是$O(1)$)计算出这两个区间合并后得到的新区间的结果</li>
 </ul>
 <p>对于这样的问题,我们有一个非常强大的工具,就是线段树.线段树可以支持以上的所有操作,而且思路非常清晰,代码也很简洁(但是我太菜所以写不简洁也写不漂亮),其除初始化的所有操作的时间复杂度均为$O(log\;n)$(初始化的复杂度是$O(n)$).</p>
-<h2 id="线段树的实现思路"><a href="#线段树的实现思路" class="headerlink" title="线段树的实现思路"></a>线段树的实现思路</h2><p>显然,在线性结构上实现区间的高速操作是不太现实的(据我所知),因此我们采用树状结构,利用分治的思想,将整个序列一分为二,再把得到的两个序列分别一分为二,知道得到的子区间</p>
+<h2 id="线段树的实现思路"><a href="#线段树的实现思路" class="headerlink" title="线段树的实现思路"></a>线段树的实现思路</h2><p>显然,在线性结构上实现区间的高速操作是不太现实的(据我所知),因此我们采用树状结构,利用分治的思想,将整个序列一分为二,再把得到的两个序列分别一分为二,直到得到的子区间长度为$1$,也就是只有一个元素时,停止划分.这样建立了线段树之后,操作时就可以按照区间的起始和终止点</p>
 <p>umm…等着填坑.</p>
 
       
@@ -489,7 +489,7 @@
 	
 	<div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/03/线段树学习笔记/">线段树学习笔记</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月03日 - 22:04</p> <p><span>最后更新:</span>2018年04月28日 - 20:04</p> <p><span>原始链接:</span><a href="/2018/04/03/线段树学习笔记/" title="线段树学习笔记">https://snake.moe/2018/04/03/线段树学习笔记/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake.moe/2018/04/03/线段树学习笔记/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/2018/04/03/线段树学习笔记/">线段树学习笔记</a></p> <p><span>文章作者:</span><a href="/" title="访问 Snake 的个人博客">Snake</a></p> <p><span>发布时间:</span>2018年04月03日 - 22:04</p> <p><span>最后更新:</span>2018年06月07日 - 14:06</p> <p><span>原始链接:</span><a href="/2018/04/03/线段树学习笔记/" title="线段树学习笔记">https://snake.moe/2018/04/03/线段树学习笔记/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snake.moe/2018/04/03/线段树学习笔记/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> var clipboard = new Clipboard('.fa-clipboard'); $(".fa-clipboard").click(function(){ clipboard.on('success', function(){ swal({ title: "", text: '复制成功', icon: "success", showConfirmButton: true }); }); }); </script> 
       
 	</div>
 
@@ -507,9 +507,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/未完成/" rel="tag"><i class="fa fa-tag"></i> 未完成</a>
-          
             <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/未完成/" rel="tag"><i class="fa fa-tag"></i> 未完成</a>
           
             <a href="/tags/可持久化/" rel="tag"><i class="fa fa-tag"></i> 可持久化</a>
           
@@ -624,7 +624,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -835,7 +835,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计42.3k字</span>
+  <span class="post-count">博客共计43.1k字</span>
 </div>
         
 <div class="busuanzi-count">
