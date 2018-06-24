@@ -130,8 +130,8 @@
       </categories>
       <tags>
         <tag>胡言乱语</tag>
-        <tag>昔日之影</tag>
         <tag>未完成</tag>
+        <tag>昔日之影</tag>
       </tags>
   </entry>
   <entry>
@@ -143,8 +143,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>未完成</tag>
+        <tag>数据结构</tag>
         <tag>可持久化</tag>
         <tag>线段树</tag>
         <tag>学习笔记</tag>
@@ -246,9 +246,9 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>胡言乱语</tag>
         <tag>图算法</tag>
         <tag>二分图匹配</tag>
+        <tag>胡言乱语</tag>
       </tags>
   </entry>
   <entry>
