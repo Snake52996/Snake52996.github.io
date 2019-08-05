@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="前言如果让所有玩家都隐身，还不会因为受到攻击而现身怎么样？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-05T05:31:26.608Z">
+<meta property="og:updated_time" content="2019-08-05T13:08:33.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="地图工坊作品-空气质量检测">
 <meta name="twitter:description" content="前言如果让所有玩家都隐身，还不会因为受到攻击而现身怎么样？">
@@ -443,6 +443,9 @@
 <h2 id="测试版更新"><a href="#测试版更新" class="headerlink" title="测试版更新"></a>测试版更新</h2><ul>
 <li>黑百合的终极技能现在附带侦测效果，将使所有敌方玩家现身</li>
 <li>现在设定扫描位置的热键修改为了交流-集合（默认设置下可以按住C键后在出现的圆盘右侧找到，将鼠标移至其上松开C键即可发送，建议在设置-控制中绑定热键便于操作），因此不会再和英雄本身的技能热键冲突了</li>
+<li>现在能够正确处理黑百合宝具启用期间切换英雄的情况了</li>
+<li>黑影的宝具添加了额外效果:当处于敌方扫描范围以内发动时，立即消除对方扫描范围，使对方在6s内不得重设范围，并令己方全队立即脱离被扫描效果</li>
+<li>现在在比赛正式开始时会清除双方的扫描范围，从而保证进攻方不会因为被堵门而在出生点处面临惨重的损失</li>
 </ul>
 <h1 id="改进项目"><a href="#改进项目" class="headerlink" title="改进项目"></a>改进项目</h1><h2 id="已知BUG"><a href="#已知BUG" class="headerlink" title="已知BUG"></a>已知BUG</h2><ul>
 <li><del>队伍2的雷达扫描位置记录异常</del></li>
@@ -452,7 +455,7 @@
 <h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><ul>
 <li>可能将雷达修改为更具有人族风格（无CD时间，有持续时间，消耗能量）</li>
 <li>设法使得光柱能够总是接触地面（而不出现悬空状况）</li>
-<li>为黑影宝具添加额外效果:使对方雷达下线(失去任何侦测能力，被侦测的友方玩家立刻进入隐身状态(除非正在被黑百合宝具侦测)),持续6s</li>
+<li>黑影在设定扫描范围时将会（从黑影的shift技能中）现身（若不位于对方扫描范围内两秒以上且敌方黑百合未启用宝具则仍将保持不可见效果）</li>
 </ul>
 <h1 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h1><h2 id="正式版"><a href="#正式版" class="headerlink" title="正式版"></a>正式版</h2><p><a href="https://github.com/Snake52996/OverwatchWorkshop/blob/master/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B-%E5%AE%8C%E6%95%B4%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81.txt" target="_blank" rel="noopener">获取完整游戏设置</a><br><a href="https://github.com/Snake52996/OverwatchWorkshop/blob/master/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B.txt" target="_blank" rel="noopener">获取地图工坊代码</a></p>
 <h2 id="测试版"><a href="#测试版" class="headerlink" title="测试版"></a>测试版</h2><p><a href="https://github.com/Snake52996/OverwatchWorkshop/blob/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B-%E5%AE%8C%E6%95%B4%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81.txt" target="_blank" rel="noopener">获取完整游戏设置</a><br><a href="https://github.com/Snake52996/OverwatchWorkshop/blob/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B.txt" target="_blank" rel="noopener">获取地图工坊代码</a></p>
@@ -779,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计4.3k字</span>
+  <span class="post-count">博客共计4.5k字</span>
 </div>
         
 <div class="busuanzi-count">
