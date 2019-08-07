@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Snake的尽头之塔">
 <meta property="og:description" content="前言如果让所有玩家都隐身，还不会因为受到攻击而现身怎么样？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-06T12:58:02.998Z">
+<meta property="og:updated_time" content="2019-08-07T13:12:03.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="地图工坊作品-空气质量检测">
 <meta name="twitter:description" content="前言如果让所有玩家都隐身，还不会因为受到攻击而现身怎么样？">
@@ -442,7 +442,7 @@
 <li>现在设定扫描位置的热键修改为了交流-集合（默认设置下可以按住C键后在出现的圆盘右侧找到，将鼠标移至其上松开C键即可发送，建议在设置-控制中绑定热键便于操作），因此不会再和英雄本身的技能热键冲突了</li>
 <li>现在能够正确处理黑百合宝具启用期间切换英雄的情况了</li>
 <li>黑影的宝具添加了额外效果:当处于敌方扫描范围以内发动时，立即消除对方扫描范围，使对方在6s内不得重设范围，并令己方全队立即脱离被扫描效果</li>
-<li>现在在比赛正式开始时会清除双方的扫描范围，从而保证进攻方不会因为被堵门而在出生点处面临惨重的损失</li>
+<li>现在在比赛正式开始时会清除双方的扫描范围，从而提高攻击目标点/护送运载目标/攻击并护送地图中防守方堵门战术的代价</li>
 </ul>
 <h2 id="测试版更新"><a href="#测试版更新" class="headerlink" title="测试版更新"></a>测试版更新</h2><ul>
 <li>现在扫描光柱可以确保足够的长度使得其能够始终落于地面之上而不会悬空，也不会使法老之鹰飞行高度高出其覆盖范围</li>
@@ -451,6 +451,7 @@
 <li><del>队伍2的雷达扫描位置记录异常</del></li>
 <li>破坏球在隐身状态下切换形态为球(?)将对玩家自身也不可见（官方Bug无能为力）</li>
 <li><del>黑影、托比昂、秩序之光等英雄的互动键拥有功能，热键冲突</del></li>
+<li>当玩家在比赛正式开始前便位于敌方扫描范围之内时，比赛开始时清除全部扫描范围的效果并不会使该玩家立即隐身</li>
 </ul>
 <h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><ul>
 <li>可能将雷达修改为更具有人族风格（无CD时间，有持续时间，消耗能量）</li>
@@ -781,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共计4.5k字</span>
+  <span class="post-count">博客共计4.6k字</span>
 </div>
         
 <div class="busuanzi-count">
