@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	cursor:default;
+}
+html{
+	font-size: 1vmin;
+}
+#_header{
+	position: absolute;
+	width: 100vw;
+	top: 10vh;
+}
+#_logo_container{
+	position: relative;
+	width: 100vw;
+	text-align: center;
+}
+#_title_container{
+	font-size: 5rem;
+	text-align: center;
+}
+._header_inner_container{
+	display: inline;
+}
+._header_inner{
+	display: inline;
+}
+#_menu{
+	display: grid;
+	grid-template-columns:50% 50%;
+	grid-template-rows:50% 50%;
+	position: absolute;
+	width: 80vw;
+	height: 60vh;
+	left: 10vw;
+	top: 25vh;
+}
+._menu_container{
+	background: white;
+}
+._menu_icon_container{
+	position: relative;
+	width: 60%;
+	height: 60%;
+	top: 10%;
+	left:20%;
+}
+._menu_icon_container img{
+	width: 100%;
+	height: 100%;
+}
+._menu_info{
+	position: relative;
+	top: 15%;
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	font-size: 3rem;
+	display: none;
+}
+/*
+._mic_left_top{
+	border-right: 2px ridge black;
+	border-bottom: 2px ridge black;
+}
+._mic_top_side{
+	border-left: 2px ridge black;
+	border-right: 2px ridge black;
+	border-bottom: 2px ridge black;
+}
+._mic_right_top{
+	border-left: 2px ridge black;
+	border-bottom: 2px ridge black;
+}
+._mic_left_side{
+	border-top: 2px ridge black;
+	border-right: 2px ridge black;
+	border-bottom: 2px ridge black;
+}
+._mic_center{
+	border: 2px ridge black;
+}
+._mic_right_side{
+	border-top: 2px ridge black;
+	border-left: 2px ridge black;
+	border-bottom: 2px ridge black;
+}
+._mic_left_bottom{
+	border-top: 2px ridge black;
+	border-right: 2px ridge black;
+}
+._mic_bottom_side{
+	border-top: 2px ridge black;
+	border-left: 2px ridge black;
+	border-right: 2px ridge black;
+}
+._mic_right_bottom{
+	border-top: 2px ridge black;
+	border-left: 2px ridge black;
+}
+*/
