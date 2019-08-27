@@ -1,3 +1,4 @@
+var IsMobileDevice = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);	//移动端标记
 var title_color_reset_timeout;
 $("._header_inner_container").hover(function(){
 	clearTimeout(title_color_reset_timeout);
