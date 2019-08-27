@@ -1,12 +1,9 @@
 var IsMobileDevice = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);	//移动端标记
 var title_color_reset_timeout;
 $("._header_inner_container").hover(function(){
-	clearTimeout(title_color_reset_timeout);
-	$("._header_inner_container:hover ._header_inner").css("color", "rgb(" + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ")");
+	$(this).stop().animate({color: "rgb(" + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ")"});
 }, function(){
-	title_color_reset_timeout = setTimeout(function(){
-		$("._header_inner_container ._header_inner").css("color", "black");
-	}, 2500);
+	$(this).delay(2500).animate({color: 'black'});
 });
 var menu_detail_show_timeout;
 $("._menu_container").on("mouseover",function(){
