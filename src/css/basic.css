@@ -14,10 +14,15 @@ html{
 #_logo_container{
 	position: relative;
 	width: 100vw;
+	height: 5vmin;
 	text-align: center;
 }
+#_logo{
+	height: 5vmin;
+	width: 5vmin;
+}
 #_title_container{
-	font-size: 5rem;
+	font-size: 4.5rem;
 	text-align: center;
 }
 ._header_inner_container{
