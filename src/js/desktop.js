@@ -3,10 +3,17 @@ $("._header_inner_container").hover(function(){
 }, function(){
 	$(this).delay(2500).animate({color: 'black'});
 });
-var menu_detail_show_timeout;
-$("._menu_container").on("mouseover",function(){
-	$("._menu_container:hover ._menu_info").stop().fadeIn();
-});
-$("._menu_container").on("mouseout",function(){
-	$("._menu_container ._menu_info").stop().fadeOut();
-});
+// Inner Lib
+{
+	let itimeout_handle = -1;
+	$("html").on("keydown", function(e){
+		if(e.key == 'q') itimeout_handle = setTimeout(function(){
+			console.log("what?");
+			$("#library a p").innerHTML = "INNER LIBRARY";
+		}, 3000);
+	});
+	$("html").on("keyup", function(e){
+		clearTimeout(itimeout_handle);
+		$("#library a p").innerHTML = "Library";
+	});
+}
