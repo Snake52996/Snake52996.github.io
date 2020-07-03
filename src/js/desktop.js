@@ -5,15 +5,17 @@ $("._header_inner_container").hover(function(){
 });
 // Inner Lib
 {
-	let itimeout_handle = -1;
-	$("html").on("keydown", function(e){
-		if(e.key == 'q') itimeout_handle = setTimeout(function(){
-			console.log("what?");
-			$("#library a p").innerHTML = "INNER LIBRARY";
-		}, 3000);
-	});
-	$("html").on("keyup", function(e){
-		clearTimeout(itimeout_handle);
-		$("#library a p").innerHTML = "Library";
+	let is_inner = false;
+	$("html").on("keypress", function(e){
+		if(e.key == 'q'){
+			if(is_inner){
+				$("#library a p")[0].innerHTML = "Library";
+				$("#library a div").addClass("_menu_icon_container").removeClass("_menu_icon_container_inner");
+			}else{
+				$("#library a p")[0].innerHTML = "INNER LIBRARY";
+				$("#library a div").addClass("_menu_icon_container_inner").removeClass("_menu_icon_container");
+			}
+			is_inner = !is_inner;
+		}
 	});
 }
