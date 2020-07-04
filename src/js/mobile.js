@@ -7,12 +7,14 @@ $("#_logo").on("click", function(){
 		$("._header_inner_container").stop().animate({color: 'black'});
 		$("#library a p")[0].innerHTML = "Library";
 		$("#library a div").addClass("_menu_icon_container").removeClass("_menu_icon_container_inner");
+		$("#library a")[0].href = "/library/"
 	}else{
 		random_timeout = setInterval(function(){
 			$("._header_inner_container:eq(" + parseInt(Math.random() * 9) + ")").stop().animate({color: "rgb(" + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ")"});
 		}, 500);
 		$("#library a p")[0].innerHTML = "INNER LIBRARY";
 		$("#library a div").addClass("_menu_icon_container_inner").removeClass("_menu_icon_container");
+		$("#library a")[0].href = "#"
 	}
 	do_random_color = !do_random_color;
 });

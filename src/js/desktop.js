@@ -11,9 +11,11 @@ $("._header_inner_container").hover(function(){
 			if(is_inner){
 				$("#library a p")[0].innerHTML = "Library";
 				$("#library a div").addClass("_menu_icon_container").removeClass("_menu_icon_container_inner");
+				$("#library a")[0].href = "/library/"
 			}else{
 				$("#library a p")[0].innerHTML = "INNER LIBRARY";
 				$("#library a div").addClass("_menu_icon_container_inner").removeClass("_menu_icon_container");
+				$("#library a")[0].href = "#"
 			}
 			is_inner = !is_inner;
 		}
