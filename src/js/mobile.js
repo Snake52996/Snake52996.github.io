@@ -14,7 +14,7 @@ $("#_logo").on("click", function(){
 		}, 500);
 		$("#library a p")[0].innerHTML = "INNER LIBRARY";
 		$("#library a div").addClass("_menu_icon_container_inner").removeClass("_menu_icon_container");
-		$("#library a")[0].href = "#"
+		$("#library a")[0].href = "/inner-library/"
 	}
 	do_random_color = !do_random_color;
 });

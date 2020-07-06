@@ -15,7 +15,7 @@ $("._header_inner_container").hover(function(){
 			}else{
 				$("#library a p")[0].innerHTML = "INNER LIBRARY";
 				$("#library a div").addClass("_menu_icon_container_inner").removeClass("_menu_icon_container");
-				$("#library a")[0].href = "#"
+				$("#library a")[0].href = "/inner-library/"
 			}
 			is_inner = !is_inner;
 		}
