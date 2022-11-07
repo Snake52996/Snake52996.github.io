@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<link href="src/images/Snake.svg" rel="icon" type="image/x-ico">
-<link href="src/css/basic.css" rel="stylesheet" type="text/css" />
-<link href="src/css/animation.css" rel="stylesheet" type="text/css" />
-<title>Snake.moe</title>
-</head>
-<body ondragstart="window.event.returnValue=false;return false;" oncontextmenu="window.event.returnValue=false;return false;" onselectstart="window.event.returnValue=false;return false;" id="poi">
-<div id="_header">
-	<div id="_logo_container">
-		<img id="_logo" class="_logo_rotate" alt="Snake" src="src/images/Snake.svg" />
-	</div>
-	<div id="_title_container">
-		<div class="_header_inner_container"><p class="_header_inner">S</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">n</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">a</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">k</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">e</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">.</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">m</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">o</p></div>
-		<div class="_header_inner_container"><p class="_header_inner">e</p></div>
-	</div>
-</div>
-<div id="_menu">
-	<div class="_menu_container _mc_left" id="blog">
-		<a href="/blog/"><div class="_menu_icon_container">
-			<img src="src/images/blog.svg" />
-		</div>
-		<p class="_menu_info">Blog</p></a>
-	</div>
-	<div class="_menu_container _mc_right" id="library">
-		<a href="/library/"><div class="_menu_icon_container">
-			<img src="src/images/library.svg" style="transform: scale(75%)" />
-		</div>
-		<p class="_menu_info">Library</p></a>
-	</div>
-</div>
-<script src="src/js/jquery-3.4.1.min.js"></script>
-<script src="src/js/jquery.animate-colors-min.js"></script>
-<script src="src/js/basic.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>Snake.moe</title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				overflow: hidden;
+				padding: 0;
+				margin: 0;
+				height: 100vh;
+				width: 100vw;
+			}
+			main{
+				display: flex;
+				justify-content: center;
+				position: relative;
+				top: 37%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			main span{
+				font-size: 4vmin;
+				margin: auto 0.1em;
+				transition-duration: 1.5s;
+			}
+		</style>
+		<link href="src/images/Snake.svg" rel="icon" type="image/x-ico">
+	</head>
+	<body ondragstart="window.event.returnValue=false;return false;" oncontextmenu="window.event.returnValue=false;return false;" onselectstart="window.event.returnValue=false;return false;">
+		<main></main>
+		<script>
+			;(()=>{
+				const Content = 'snake.moe';
+				const Timeout = 1000;
+				const getColorAdapter = (target) => {
+					const colorAdapter = () => {
+						target.style.color = `#${parseInt(Math.random()*255).toString(16)}${parseInt(Math.random()*255).toString(16)}${parseInt(Math.random()*255).toString(16)}`;
+						setTimeout(colorAdapter, Timeout);
+					};
+					return colorAdapter;
+				};
+				window.addEventListener('load', ()=>{
+					const target = document.getElementsByTagName('main')[0];
+					for(c of Content){
+						let container = document.createElement('span');
+						container.innerText = c;
+						target.appendChild(container);
+						setTimeout(getColorAdapter(container), parseInt(Math.random(3000)));
+					}
+				});
+			})();
+		</script>
+	</body>
 </html>
